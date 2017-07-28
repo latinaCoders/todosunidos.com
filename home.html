@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<title> Todos Unidos </title>
+
+
+
+<link rel = "shortcut icon" href="favicon.ico"/>
+
+
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h1,h2,h6 {font-family: "Oswald"}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #6b81ef;
+}
+
+.active {
+    background-color: #f70909;
+}
+
+
+.scroll-left {
+height: 50px; 
+overflow: hidden;
+position: relative;
+}
+.scroll-left p {
+position: absolute;
+width: 50%;
+height: 100%;
+margin: 0;
+line-height: 50px;
+text-align: center;
+/* Starting position */
+-moz-transform:translateX(100%);
+-webkit-transform:translateX(100%); 
+transform:translateX(100%);
+/* Apply animation to this element */ 
+-moz-animation: scroll-left 10s linear infinite;
+-webkit-animation: scroll-left 10s linear infinite;
+animation: scroll-left 10s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+0% { -moz-transform: translateX(100%); }
+100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+0% { -webkit-transform: translateX(100%); }
+100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+0% { 
+-moz-transform: translateX(100%); /* Browser bug fix */
+-webkit-transform: translateX(100%); /* Browser bug fix */
+transform: translateX(100%); 
+}
+100% { 
+-moz-transform: translateX(-100%); /* Browser bug fix */
+-webkit-transform: translateX(-100%); /* Browser bug fix */
+transform: translateX(-100%); 
+}
+}
+
+p{background-color:rgb(4, 45, 112);
+color:white;}
+
+
+</style>
+
+
+  
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+
+
+<div class="w3-content" style="max-width:1600px">
+
+  <!-- Header -->
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h1 class="w3-xxxlarge"><b>Todos Unidos</b></h1>
+    <h6>Nuestra Vida <span class="w3-tag">Nuestro Futuro</span></h6>
+  </header>
+<div class="scroll-left">
+<p><strong>Breaking News</strong><a href="#BreakingNews"> SEE MORE HERE </a> </p>
+</div>
+  <br>
+
+  <ul>
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="politicalRights.html">Political Rights</a></li>
+  <li><a href="politicalStats.html">Political Stats</a></li>
+  <li><a href="resoures.html">Resources</a></li>
+  <li><a href=" index.html">Eligibility Quiz</a></li>
+  <li><a href=" aboutUs.html">About Us</a></li>
+</ul>
+
+  <!-- Image header -->
+  <header class="w3-display-container w3-wide" id="home">
+    <img class="w3-image" src="p.jpg" alt="" width="1600" height="1060">
+    <div class="w3-display-left w3-padding-large">
+      <h1 class="w3-text-white">Home</h1>
+      <h1 class="w3-jumbo w3-text-white w3-hide-small">
+      <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off"
+    </div>
+  </header>
+<font size="1"><a href="https://www.buzzfeed.com/adriancarrasquillo/22-powerful-images-by-dreamers-a-window-into-life-as-an-undo?utm_term=.vlKwwZlpQ#.ew6KKBGxd">Source</a>
+</font></br></br>
+  
+    
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+       <h3><b>Objective</b></h3>  <center><h4>Our objective is to keep families together and let them live their lives peacefully, we are doing this by informing them about current immigration events. The political atmosphere we are currently living in dehumanizes immigrants and this website serves as a resource to equip our visitors with valuable information such as immigrant rights, policies, statistics, and upcoming important deadlines. We want our people to be safe and to feel in control of  their lives. Politicians have labeled immigrants as "aliens", which creates a divide and a unwelcoming. This dehumanizing stereotype creates fear amongst innocent lives that are fighting for their freedom and their children's freedom.
+      </h4></center>
+
+       <h3 id ="BreakingNews"><b>Breaking News</b></h3>  <center><h4>Senator Dick Durbin and many more discussed with Trump about The DACA bill being pushed and argued on the contrary that people who were brought into this country as children's “fairly” should not be judged as Trump has categorized all of us as “bad hombres”.  Although Trump has stated that DACA is a tough issue and that they have not come to an agreement The Department of Homeland Security stated that people who are still applying are eligible for renewable status’. More than 780,000 people signed up for DACA since 2012, and over one million more might still be eligible for DACA.  To qualify for DACA you need a criminal background check, have had employment for 3 years, either obtain a GED or be a U.S graduate from high school. 
+
+
+      </h4></center>
+      <font size = "4"><a href ="https://www.durbin.senate.gov/imo/media/doc/Dream%20Act%20of%202017%20section%20by%20section.pdf">MORE INFO</a></font>
+
+    <!-- END About/Intro Menu -->
+    </div>
+
+  <!-- END GRID -->
+  </div>
+
+<!-- END w3-content -->
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+  <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+ <h5 align ="justify">Created by Latina Coders</br>
+  Contact us at: </h5>
+  latinaCoders2017@gmail.com</p>
+ <h5  align="right"> This page contains general information</br>
+   and should not be considered as legal </br>
+   advice for an individual, case, or </br>situation.</h5>
+</footer>
+
+<script>
+// Toggle between hiding and showing blog replies/comments
+document.getElementById("myBtn").click();
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+
+</script>
+
+</body>
+</html>
