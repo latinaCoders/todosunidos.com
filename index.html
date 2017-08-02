@@ -1,62 +1,63 @@
 <!DOCTYPE html>
-
+					
 <html>
 <title> Todos Unidos </title>
 <link rel = "shortcut icon" href="favicon.ico"/>
-				<head>
-					<h1><center> Quizes </center></h1>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h1,h2,h6 {font-family: "Oswald"}
 
-						<style>
-						<link rel = "stylesheet" type= "text/css" href= "style.css">
+h3{ 
+  color:#ef0b0b;}
 
-						/*color on title*/
-						body{
-							background-color:red;
-							}
-							h1{
-							background-color: #f90909
-							}
-							/*p{
-							background-color: #ff0707
-							}*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
 
-							ul {
-							    list-style-type: none;
-							    margin: 0;
-							    padding: 0;
-							    overflow: hidden;
-							    background-color: white;
-							}
+li {
+    float: left;
+}
 
-							li {
-							    float: left;
-							}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 
-							li a {
-							    display: block;
-							    color: black;
-							    text-align: center;
-							    padding: 14px 16px;
-							    text-decoration: none;
-							}
+li a:hover:not(.active) {
+    background-color: #6b81ef;
+}
 
-							li a:hover:not(.active) {
-							    background-color: #6b81ef;
-							}
+.active {
+    background-color: #f70909;
+}
 
-							.active {
-							    background-color: #f70909;
-							}
-</body>
+
+
+
 </style>
-</head>
+<div class="w3-content" style="max-width:1600px">
 
-	
+  <!-- Header -->
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h1 class="w3-xxxlarge"><b>Todos Unidos</b></h1>
+    <h6>Nuestra Vida <span class="w3-tag">Nuestro Futuro</span></h6>
+  </header>
+  
 
-
-					
-
-
+    </div>
+  </header>
 <body>
 	<center>
 	
@@ -65,15 +66,23 @@
   <li><a href="politicalRights.html">Political Rights</a></li>
   <li><a href="politicalStats.html">Political Stats</a></li>
   <li><a href="resoures.html">Resources</a></li>
-  <li><a class="active" href=" index.html">Quizes</a></li>
+  <li><a class="active" href=" index.html">Citizenship Quiz</a></li>
   <li><a href=" aboutUs.html">About Us</a></li>
 </ul>
 </body>
+<header class="w3-display-container w3-wide" id="home">
+    <img class="w3-image" src="citizen.jpg" alt="Political Rights" width="1600" height="1060">
+    <div class="w3-display-left w3-padding-large">
+      <h1  class="w3-text-white">Citizenship Quiz</h1>
+      <h1 class="w3-jumbo w3-text-white w3-hide-small">
+      <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off">
  	</center>
  	<html xmlns="http://www.w3.org/1999/xhtml">
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Quizes</title>
+
+
+<!-- <title>Citizenship Quiz</title> -->
 <style>
 <body> {
 	font-family: Helvetica;
@@ -104,8 +113,8 @@
 	}
 
 	input {
-	width: 30px;
-	margin-left: 20px;
+	
+	margin-bottom: 20px;
 	}
 
 	h2 {
@@ -114,1346 +123,1125 @@
 	}
 
 	button {
-	width: 100px;
-	margin-top: 20px;
+	background:#E4E4E4;
+	border:none;
+	border-radius:5px;
+	padding:10px;
+	color:white;
+	font-size:16px;
+	transition-duration: .5s;
+	margin-top:15px;
+	}
+	#button:hover {
+	background:white;
+	border: 1px solid white;
+	color:black;
+	cursor:pointer;
+}
+
+	#after_submit{
+		visibility:hidden;
+		font-family:'Lato', sans-serif;
+		background: :#BEC2C4;
+		padding:10px 20px 10 px 20px;
+		width:400px;
+		border-radius: 20px;
+		margin-left:20px;
+		font-size:20px;
+
 	}
 
 </style>
 
-<!-- <script type="text/javascript"></script>
-</body></script>
-<link href="../style.css" rel="stylesheet" type="text/css" />
-<head>
-<title>Citizenship Quiz</title> -->
+
 </head>
+
 <body>
-<div id="main"><!-- open main div -->
-<div id="header"><!-- open header div -->
-<h2>Citizenship Quiz</h2>
-</div><!-- close header div -->
+<form id ="quiz" name = "quiz">
 
-
-<form id="form1" action" ">
-<h2>1. In what month do we vote for our President?</h2>
-<input type="radio" name="vote" value="0" />October<br />
-<input type="radio" name="vote" value="0" />January<br />
-<input type="radio" name="vote" value="1" />November<br />
-<input type="radio" name="vote" value="0" />February<br />
+<h2>1. In what month do we vote?</h2>
+<input type="radio" id="mc" name="question1" value="January" />January<br>
+<input type="radio" id="mc" name="question1" value="November" />November<br>
+<input type="radio" id="mc" name="question1" value="February" />February<br>
+<input type="radio" id="mc" name="question1" value="April" /> April<br>
 
 <h2>2. What is the name of the Speaker of the House of Representatives now?</h2>
-<input type="radio" name="HoR" value="0" />Joe Biden<br />
-<input type="radio" name="HoR" value="0" />Barack Obama<br />
-<input type="radio" name="HoR" value="1" />Paul D. Ryan<br />
-<input type="radio" name="HoR" value="0" />Hillary Clinton<br />
+<input type="radio" id="mc" name="question2" value="Joe Biden" />Joe Biden<br>
+<input type="radio" id="mc" name="question2" value="Barack Obama" />Barack Obama<br>
+<input type="radio" id="mc"name="question2" value="Paul D. Ryan " />Paul D. Ryan<br>
+<input type="radio" id="mc" name="question2" value="Hillary Clinton" />Hillary Clinton<br>
 
 <h2>3. Which is one branch or part of the government?</h2>
-<input type="radio" name="branch" value="0" />Parliament<br />
-<input type="radio" name="branch" value="1" />Congress<br />
-<input type="radio" name="branch" value="0" />state government<br />
-<input type="radio" name="branch" value="0" />United States<br />
+<input type="radio" id="mc" name="question3" value="Parliament" />Parliament<br>
+<input type="radio" id="mc" name="question3" value="Congress" />Congress<br>
+<input type="radio" id="mc" name="question3" value="State Government" />State Government<br>
+<input type="radio" id="mc" name="question3" value="United States" />United States<br>
 
 <h2>4. There were 13 original states. Name three.</h2>
-<input type="radio" name="ogstates" value="1" />Maryland, Virginia, and North Carolina<br />
-<input type="radio" name="ogstates" value="0" />Washington, Oregon, and California<br />
-<input type="radio" name="ogstates" value="0" />Virginia, North Carolina, and Florida<br />
-<input type="radio" name="ogstates" value="0" />New York, Kentucky, and Georgia<br />
+<input type="radio" id="mc" name="question4" value="Maryland, Virginia, and North Carolina" />Maryland, Virginia, and North Carolina<br>
+<input type="radio" id="mc" name="question4" value="Washington, Oregon, and California" />Washington, Oregon, and California<br >
+<input type="radio" id="mc" name="question4" value="Virginia, North Carolina, and Florida" />Virginia, North Carolina, and Florida<br>
+<input type="radio" id="mc" name="question4" value="New York, Kentucky, and Florida" />New York, Kentucky, and Georgia<br>
 
 <h2>5. Under our Constitution, some powers belong to the states. What is one power of the states?</h2>
-<input type="radio" name="con" value="0" />Create an army<br />
-<input type="radio" name="con" value="1" />Provide schooling and education<br />
-<input type="radio" name="con" value="0" />coin or print money<br />
-<input type="radio" name="con" value="0" />make treaties<br />
+<input type="radio" id="mc" name="question5" value="Create an army" />Create an army<br>
+<input type="radio" id="mc" name="question5" value="Provide schooling and education" />Provide schooling and education<br>
+<input type="radio" id="mc" name="question5" value="Coin or print money" />Coin or print money<br>
+<input type="radio" id="mc" name="question5" value="Make treaties" />Make treaties<br>
 
 <h2>6. What stops one branch of government from becoming too powerful?</h2>
-<input type="radio" name="pwr" value="1" />checks and balances<br />
-<input type="radio" name="pwr" value="0" />the President<br />
-<input type="radio" name="pwr" value="0" />freedom of speech<br />
-<input type="radio" name="pwr" value="0" />the people<br />
+<input type="radio" id="mc" name="question6" value="checks and balances" />checks and balances<br>
+<input type="radio" id="mc" name="question6" value="the President" />the President<br>
+<input type="radio" id="mc" name="question6" value="freedom of speech" />freedom of speech<br>
+<input type="radio" id="mc" name="question6" value="the people" />the people<br>
 
 <h2>7. What is the political party of the President now?</h2>
-<input type="radio" name="pp" value="0" />Green Party<br />
-<input type="radio" name="pp" value="0" />Independent Party<br />
-<input type="radio" name="pp" value="1" />Republican Party<br />
-<input type="radio" name="pp" value="0" />Democratic Party<br />
+<input type="radio" id="mc" name="question7" value="Green Party" />Green Party<br>
+<input type="radio" id="mc" name="question7" value="Independent Party" />Independent Party<br>
+<input type="radio" id="mc" name="question7" value="Republican Party" />Republican Party<br>
+<input type="radio" id="mc" name="question7" value="Democratic Party" />Democratic Party<br>
 
 <h2>8. What are two rights of everyone living in the United States?</h2>
-<input type="radio" name="twoR" value="1" />Freedom of Speech and Religion<br />
-<input type="radio" name="twoR" value="0" />freedom to petition the government and freedom to disobey traffic laws<br />
-<input type="radio" name="twoR" value="0" />freedom of speech to run for president <br />
-<input type="radio" name="twoR" value="0" />freedom of religion and freedom to make treatied with other countries. <br />
+<input type="radio" id="mc" name="question8" value="Freedom of Speech and Religion" />Freedom of Speech and Religion<br >
+<input type="radio" id="mc" name="question8" value="Freedom to petition the government and freedom to disobey traffic laws" />Freedom to petition the government and freedom to disobey traffic laws <br >
+<input type="radio" id="mc" name="question8" value="Freedom of speech to run for president" />Freedom of speech to run for president <br >
+<input type="radio" id="mc" name="question8" value="Freedom of religion and freedom to make treatied with other countries" />Freedom of religion and freedom to make treatied with other countries <br >
 
 <h2>9. Name one war fought by the United States in the 1900s?</h2>
-<input type="radio" name="war" value="0" />War of 1812<br />
-<input type="radio" name="war" value="0" />Civil War<br />
-<input type="radio" name="war" value="0" />Revolutionary War<br />
-<input type="radio" name="war" value="1" />World War 1 <br />
+<input type="radio" id="mc" name="question9" value="War of 1812" />War of 1812<br >
+<input type="radio" id="mc" name="question9" value="Civil War" />Civil War<br >
+<input type="radio" id="mc" name="question9" value="Revolutionary War" />Revolutionary War<br >
+<input type="radio" id="mc" name="question9" value="World War 1" />World War 1 <br >
 
 <h2>10. How many U.S. Senators are there?</h2>
-<input type="radio" name="sen" value="0" />50<br />
-<input type="radio" name="sen" value="0" />52<br />
-<input type="radio" name="sen" value="1" />100<br />
-<input type="radio" name="sen" value="0" />435<br />
+<input type="radio" id="mc" name="q10uestion" value="50" />50<br >
+<input type="radio" id="mc" name="question10" value="52" />52<br >
+<input type="radio" id="mc" name="question10" value="100" />100<br >
+<input type="radio" id="mc" name="question10" value="435" />435<br >
 
 <h2>11. Who was the first president?</h2>
-<input type="radio" name="firstP" value="0" />John Adams<br />
-<input type="radio" name="firstP" value="1" />George Washington<br />
-<input type="radio" name="firstP" value="0" />Thomas Jefferson<br />
-<input type="radio" name="firstP" value="0" />Abraham Lincoln <br />
+<input type="radio" id="mc" name="question11" value="John Adams" />John Adams<br />
+<input type="radio" id="mc" name="question11" value="George Washington" />George Washington<br />
+<input type="radio" id="mc" name="question11" value="Thomas Jefferson" />Thomas Jefferson<br />
+<input type="radio" id="mc" name="question11" value="Abraham Lincoln" />Abraham Lincoln <br />
 
 <h2>12. What are two ways that Americans can participate in their democracy?</h2>
-<input type="radio" name="demo" value="0" />vote and join a civic group<br />
-<input type="radio" name="demo" value="0" />give an elected official your opinion on an issue and join a community.<br />
-<input type="radio" name="demo" value="0" />write to a newspaper and call Senators and Representatives<br />
-<input type="radio" name="demo" value="1" />all of these answers<br />
+<input type="radio" id="mc" name="question12" value="Vote and join a civic group" />Vote and join a civic group<br />
+<input type="radio" id="mc" name="question12" value="Give an elected official your opinion on an issue and join a community." />Give an elected official your opinion on an issue and join a community.<br />
+<input type="radio" id="mc" name="question12" value="Write to a newspaper and call Senators and Representatives" />Write to a newspaper and call Senators and Representatives<br />
+<input type="radio" id="mc" name="question12" value="All of these answers" />All of these answers<br />
 
 <h2>13. What did the Emancipation Proclamation do?</h2>
-<input type="radio" name="pro" value="0" />gave the United States independence from Great Britain<br />
-<input type="radio" name="pro" value="0" />ended World War 1<br />
-<input type="radio" name="pro" value="1" />freed slaces in most Southern states<br />
-<input type="radio" name="pro" value="0" />gave women the right to vote<br />
+<input type="radio" id="mc" name="question13" value="Gave the United States independence from Great Britain" />Gave the United States independence from Great Britain<br />
+<input type="radio" id="mc" name="question13" value="Ended World War 1" />Ended World War 1<br />
+<input type="radio" id="mc" name="question13" value="Freed slaves in most Southern states" />Freed slaces in most Southern states<br />
+<input type="radio" id="mc" name="question13" value="Gave women the right to vote" />Gave women the right to vote<br />
 
 <h2>14. What are the two parts of the U.S. Congress?</h2>
-<input type="radio" name="2congress" value="0" />House of Lords and the House of Commons<br />
-<input type="radio" name="2congress" value="0" />the Senate and the courts<br />
-<input type="radio" name="2congress" value="0" />the House of Representatives and the courts<br />
-<input type="radio" name="2congress" value="1" />Senate and House of Representatives<br />
+<input type="radio" id="mc" name="question14" value="House of Lords and the House of Commons" />House of Lords and the House of Commons<br />
+<input type="radio" id="mc" name="question14" value="The Senate and the courts" />The Senate and the courts<br />
+<input type="radio" id="mc" name="question14" value="The House of Representatives and the courts" />The House of Representatives and the courts<br />
+<input type="radio" id="mc" name="question14" value="Senate and House of Representatives" />Senate and House of Representatives<br />
 
 <h2>15. What are the two major political parties in the United States?</h2>
-<input type="radio" name="pparty" value="1" />Democratic and Republican<br />
-<input type="radio" name="pparty" value="0" />Reform and Green <br />
-<input type="radio" name="pparty" value="0" />Democratic-Republican and Whigs<br />
-<input type="radio" name="pparty" value="0" />American and Bull-Moose<br />
+<input type="radio" id="mc" name="question15" value="Democratic and Republican" />Democratic and Republican<br />
+<input type="radio" id="mc" name="question15" value="Reform and Green" />Reform and Green <br />
+<input type="radio" id="mc" name="question15" value="Democratic-Republican and Whigs" />Democratic-Republican and Whigs<br />
+<input type="radio" id="mc" name="question15" value="American and Bull-Moose" />American and Bull-Moose<br />
 
 <h2>16. Why does the flag have 50 stars?</h2>
-<input type="radio" name="stars" value="0" />because there were 50 people who originally came to the United States<br />
-<input type="radio" name="stars" value="0" />because there were 50 original colonies<br />
-<input type="radio" name="stars" value="0" />because there is one star for each president<br />
-<input type="radio" name="stars" value="1" />because there is one for each state<br />
+<input type="radio" id="mc" name="question16" value="There was 50 people who originally came to the United States" />There was 50 people who originally came to the United States<br />
+<input type="radio" id="mc" name="question16" value="There was 50 original colonies" />There was 50 original colonies<br />
+<input type="radio" id="mc" name="question16" value="There is one star for each president" />There is one star for each president<br />
+<input type="radio" id="mc" name="question16" value="There is one for each state" />There is one for each state<br />
 
 <h2>17. We elect a President for how many years?</h2>
-<input type="radio" name="elect" value="1" />4<br />
-<input type="radio" name="elect" value="0" />2<br />
-<input type="radio" name="elect" value="0" />10<br />
-<input type="radio" name="elect" value="0" />8<br />
+<input type="radio" id="mc" name="question17" value="4" />4<br />
+<input type="radio" id="mc" name="question17" value="2" />2<br />
+<input type="radio" id="mc" name="question17" value="10" />10<br />
+<input type="radio" id="mc" name="question17" value="8" />8<br />
 
 <h2>18. Why do some states have more Representatives than other states?</h2>
-<input type="radio" name="otherS" value="0" />because of the geographical size of the state<br />
-<input type="radio" name="otherS" value="1" />because of the state's population<br />
-<input type="radio" name="otherS" value="0" />because of the state's location<br />
-<input type="radio" name="otherS" value="0" />because the state's Representative have seniority in the House of Representatives<br />
+<input type="radio" id="mc" name="question18" value="because of the geographical size of the state" />because of the geographical size of the state<br />
+<input type="radio" id="mc" name="question18" value="because of the state's population" />because of the state's population<br />
+<input type="radio" id="mc" name="question18" value="because of the state's location" />because of the state's location<br />
+<input type="radio" id="mc" name="question18" value="because the state's Representative have seniority in the House of Representatives" />because the state's Representative have seniority in the House of Representatives<br />
 
 <h2>19. What are two Cabinet-level positions?</h2>
-<input type="radio" name="cabinet" value="0" />Secretary of Health and Human Services and Secretary of the Navy<br />
-<input type="radio" name="cabinet" value="0" />Secretary of Wheather and Secretary of Energy<br />
-<input type="radio" name="cabinet" value="1" />Secretary of State and Secretary of Labor <br />
-<input type="radio" name="cabinet" value="0" />Secretary of the Interior and Secretary of History <br />
+<input type="radio" id="mc" name="question19" value="Secretary of Health and Human Services and Secretary of the Navy" />Secretary of Health and Human Services and Secretary of the Navy<br />
+<input type="radio" id="mc" name="question19" value="Secretary of Wheather and Secretary of Energy" />Secretary of Wheather and Secretary of Energy<br />
+<input type="radio" id="mc" name="question19" value="Secretary of State and Secretary of Labor" />Secretary of State and Secretary of Labor <br />
+<input type="radio" id="mc" name="question19" value="Secretary of the Interior and Secretary of History" />Secretary of the Interior and Secretary of History <br />
 
 <h2>20. During the Cold War, what was the main concern of the United States?</h2>
-<input type="radio" name="cold" value="0" />climate change<br />
-<input type="radio" name="cold" value="0" />slavery<br />
-<input type="radio" name="cold" value="0" />the Great Depression<br />
-<input type="radio" name="cold" value="1" />Communism<br />
+<input type="radio" id="mc" name="question20" value="Climate change" />Climate change<br />
+<input type="radio" id="mc" name="question20" value="Slavery" />Slavery<br />
+<input type="radio" id="mc" name="question20" value="The Great Depression" />The Great Depression<br />
+<input type="radio" id="mc" name="question20" value="Communism" />Communism<br />
 
 <h2>21. Who is in charge of the executive branch?</h2>
-<input type="radio" name="exB" value="0" />the Prime Minister<br />
-<input type="radio" name="exB" value="1" />the President<br />
-<input type="radio" name="exB" value="0" />the Speaker of the House<br />
-<input type="radio" name="exB" value="0" />the Chief Justice<br />
+<input type="radio" id="mc" name="question21" value="the Prime Minister" />the Prime Minister<br />
+<input type="radio" id="mc" name="question21" value="the President" />the President<br />
+<input type="radio" id="mc" name="question21" value="the Speaker of the House" />the Speaker of the House<br />
+<input type="radio" id="mc" name="question21" value="the Chief Justice" />the Chief Justice<br />
 
 <h2>22. Who is the "Father of Our Country"?</h2>
-<input type="radio" name="dad" value="0" />Patrick Henry<br />
-<input type="radio" name="dad" value="1" />George Washington<br />
-<input type="radio" name="dad" value="0" />Abraham Lincoln<br />
-<input type="radio" name="dad" value="0" />Thomas Jefferson<br />
+<input type="radio" id="mc" name="question22" value="Patrick Henry" />Patrick Henry<br />
+<input type="radio" id="mc" name="question22" value="George Washington" />George Washington<br />
+<input type="radio" id="mc" name="question22" value="Abraham Lincoln" />Abraham Lincoln<br />
+<input type="radio" id="mc" name="question22" value="Thomas Jefferson" />Thomas Jefferson<br />
 
 <h2>23. What did Martin Luther Kingn Jr. do?</h2>
-<input type="radio" name="mlk" value="1" />fought for civil rights<br />
-<input type="radio" name="mlk" value="0" />became a U.S. Senator <br />
-<input type="radio" name="mlk" value="0" />fought for women's suffrage<br />
-<input type="radio" name="mlk" value="0" />ran for President of the United States<br />
+<input type="radio" id="mc" name="question23" value="fought for civil rights" />fought for civil rights<br />
+<input type="radio" id="mc" name="question23" value="became a U.S. Senator" />became a U.S. Senator <br />
+<input type="radio" id="mc" name="question23" value="fought for women's suffrage" />fought for women's suffrage<br />
+<input type="radio" id="mc" name="question23" value="ran for President of the United States" />ran for President of the United States<br />
 
 <h2>24. What ocean is on the West Coast of the United States?</h2>
-<input type="radio" name="westC" value="0" />Arctic Ocean<br />
-<input type="radio" name="westC" value="0" />Southern Ocean<br />
-<input type="radio" name="westC" value="0" />Atlantic Ocean<br />
-<input type="radio" name="westC" value="1" />Pacific Ocean<br />
+<input type="radio" id="mc" name="question24" value="Arctic Ocean" />Arctic Ocean<br />
+<input type="radio" id="mc" name="question24" value="Southern Ocean" />Southern Ocean<br />
+<input type="radio" id="mc" name="question24" value="Atlantic Ocean" />Atlantic Ocean<br />
+<input type="radio" id="mc" name="question24" value="Pacific Ocean" />Pacific Ocean<br />
 
 <h2>25. What is freedom of religion?</h2>
-<input type="radio" name="religion" value="0" />No one can practice a religion<br />
-<input type="radio" name="religion" value="1" />You can practice any religion or no religion at all.<br />
-<input type="radio" name="religion" value="0" />You can't choose the time you practice your religion.<br />
-<input type="radio" name="religion" value="0" />You must choose a religion.<br />
+<input type="radio" id="mc" name="question25" value="No one can practice a religion." />No one can practice a religion.<br />
+<input type="radio" id="mc" name="question25" value="You can practice any religion or no religion at all." />You can practice any religion or no religion at all.<br />
+<input type="radio" id="mc" name="question25" value="You can't choose the time you practice your religion." />You can't choose the time you practice your religion.<br />
+<input type="radio" id="mc" name="question25" value="You must choose a religion." />You must choose a religion.<br />
 
 <h2>26. Name one U.S. territory.</h2>
-<input type="radio" name="ter" value="0" />Haiti<br />
-<input type="radio" name="ter" value="1" />Guam<br />
-<input type="radio" name="ter" value="0" />Bermuda<br />
-<input type="radio" name="ter" value="0" />Cayman Islands<br />	
+<input type="radio" id="mc" name="question26" value="Haiti" />Haiti<br />
+<input type="radio" id="mc" name="question26" value="Guam" />Guam<br />
+<input type="radio" id="mc" name="question26" value="Bermuda" />Bermuda<br />
+<input type="radio" id="mc" name="question26" value="Cayman Islands" />Cayman Islands<br />	
 
 <h2>27. Name the U.S. war between the North and the South.</h2>
-<input type="radio" name="ns" value="0" />The War of 1812<br />
-<input type="radio" name="ns" value="1" />The Civil War<br />
-<input type="radio" name="ns" value="0" />World War I<br />
-<input type="radio" name="ns" value="0" />the Revolutionary War<br />
+<input type="radio" id="mc" name="quetsion27" value="The War of 1812" />The War of 1812<br />
+<input type="radio" id="mc" name="question27" value="The Civil War" />The Civil War<br />
+<input type="radio" id="mc" name="question27" value="World War I" />World War I<br />
+<input type="radio" id="mc" name="question27" value="The Revolutionary War" />The Revolutionary War<br />
 
 <h2>28. What does the President's Cabinet do?</h2>
-<input type="radio" name="presC" value="1" />advises the President<br />
-<input type="radio" name="presC" value="0" />commands the U.S. Armed Forces<br />
-<input type="radio" name="presC" value="0" />makes laws<br />
-<input type="radio" name="presC" value="0" />all of these answers<br />
+<input type="radio" id="mc" name="question28" value="Advises the President" />Advises the President<br />
+<input type="radio" id="mc" name="question28" value="Commands the U.S. Armed Forces" />Commands the U.S. Armed Forces<br />
+<input type="radio" id="mc" name="question28" value="Makes laws" />Makes laws<br />
+<input type="radio" id="mc" name="question28" value="All of these answers" />All of these answers<br />
 
 <h2>29. Who is the Commander in Chief of the military?</h2>
-<input type="radio" name="cChief" value="0" />the Vice President<br />
-<input type="radio" name="cChief" value="0" />the Secretary of Defense<br />
-<input type="radio" name="cChief" value="1" />the President<br />
-<input type="radio" name="cChief" value="0" />the Attorney General<br />
+<input type="radio" id="mc" name="question29" value="The Vice President" />The Vice President<br />
+<input type="radio" id="mc" name="question29" value="The Secretary of Defense" />The Secretary of Defense<br />
+<input type="radio" id="mc" name="question29" value="The President" />The President<br />
+<input type="radio" id="mc" name="question29" value="The Attorney General" />The Attorney General<br />
 
 <h2>30. What major event happened on September 11, 2001, in the United States?</h2>
-<input type="radio" name="911" value="0" />Hurricane Andrew struck the United States.<br />
-<input type="radio" name="911" value="1" />Terrorists attacked the United States.<br />
-<input type="radio" name="911" value="0" />The Japanese attacked Pearl Harbor.<br />
-<input type="radio" name="911" value="0" />An accident at Three Mile Island Nuclear Plant occurred.<br/>
+<input type="radio" id="mc" name="question30" value="Hurricane Andrew struck the United States." />Hurricane Andrew struck the United States.<br />
+<input type="radio" id="mc" name="question30" value="Terrorists attacked the United States." />Terrorists attacked the United States.<br />
+<input type="radio" id="mc" name="question30" value="The Japanese attacked Pearl Harbor." />The Japanese attacked Pearl Harbor.<br />
+<input type="radio" id="mc" name="question30" value="An accident at Three Mile Island Nuclear Plant occurred." />An accident at Three Mile Island Nuclear Plant occurred.<br/>
 
 <h2>31. What is one responsibility that is only for United States citizens?</h2>
-<input type="radio" name="responsible" value="0" />be respectful of others<br />
-<input type="radio" name="responsible" value="0" />obey the law<br />
-<input type="radio" name="responsible" value="0"/>pay taxes<br />
-<input type="radio" name="responsible" value="1" />serve on a jury<br />
+<input type="radio" id="mc" name="question31" value="be respectful of others" />be respectful of others<br />
+<input type="radio" id="mc" name="question31" value="obey the law" />obey the law<br />
+<input type="radio" id="mc" name="question31" value="pay taxes"/>pay taxes<br />
+<input type="radio" id="mc" name="question31" value="serve on a jury" />serve on a jury<br />
 
 <h2>32. When do we celebrate Independence Day?</h2>
-<input type="radio" name="fire" value="1" />July 4<br />
-<input type="radio" name="fire" value="0" />June 30<br />
-<input type="radio" name="fire" value="0" />January 1<br />
-<input type="radio" name="fire" value="0" />March 4<br />
+<input type="radio" id="mc" name="question32" value="July 4" />July 4<br />
+<input type="radio" id="mc" name="question32" value="June 30" />June 30<br />
+<input type="radio" id="mc" name="question32" value="January 1" />January 1<br />
+<input type="radio" id="mc" name="question32" value="March 4" />March 4<br />
 
 <h2>33. What did the Declaration of Independence do?</h2>
-<input type="radio" name="dcl" value="0" />gave women the right to vote<br />
-<input type="radio" name="dcl" value="1" />declared our independence from Great Britain<br />
-<input type="radio" name="dcl" value="0" />freed the slaves<br />
-<input type="radio" name="dcl" value="0" />declared our independence from France<br />
+<input type="radio" id="mc" name="question33" value="gave women the right to vote" />gave women the right to vote<br />
+<input type="radio" id="mc" name="question33" value="declared our independence from Great Britain" />declared our independence from Great Britain<br />
+<input type="radio" id="mc" name="question33" value="freed the slaves" />freed the slaves<br />
+<input type="radio" id="mc" name="question33" value="declared our independence from France" />declared our independence from France<br />
 
 <h2>34. Who lived in America before the Europeans arrived?</h2>
-<input type="radio" name="lived" value="0" />Floridians<br />
-<input type="radio" name="lived" value="0" />No one<br />
-<input type="radio" name="lived" value="1" />American Indians<br />
-<input type="radio" name="lived" value="0" />Canadians<br />
+<input type="radio" id="mc" name="question34" value="Floridians" />Floridians<br />
+<input type="radio" id="mc" name="question34" value="No one" />No one<br />
+<input type="radio" id="mc" name="question34" value="American Indians" />American Indians<br />
+<input type="radio" id="mc" name="question34" value="Canadians" />Canadians<br />
 
 <h2>35. Why did the colonist fight the British?</h2>
-<input type="radio" name="colonist" value="0" />because the British army stayed in their houses<br />
-<input type="radio" name="colonist" value="0" />because they didn't have self- government<br />
-<input type="radio" name="colonist" value="0" />because of the hight taxes<br />
-<input type="radio" name="colonist" value="1" /> all of the above<br />
+<input type="radio" id="mc" name="question35" value="because the British army stayed in their houses" />because the British army stayed in their houses<br />
+<input type="radio" id="mc" name="question35" value="because they didn't have self- government" />because they didn't have self- government<br />
+<input type="radio" id="mc" name="question35" value="because of the hight taxes" />because of the hight taxes<br />
+<input type="radio" id="mc" name="question35" value="all of the above" /> all of the above<br />
 
 <h2>36. When was the Constitution written?</h2>
-<input type="radio" name="write" value="0" />1789<br />
-<input type="radio" name="write" value="1" />1787<br />
-<input type="radio" name="write" value="0" />1790<br />
-<input type="radio" name="write" value="0" />1776<br />
+<input type="radio" id="mc" name="question36" value="1789" />1789<br />
+<input type="radio" id="mc" name="question36" value="1787" />1787<br />
+<input type="radio" id="mc" name="question36" value="1790" />1790<br />
+<input type="radio" id="mc" name="question36" value="1776" />1776<br />
 
 <h2>37. Who do we show loyalty to when we say the Pledge of Allegiance?</h2>
-<input type="radio" name="united" value="0" />Congress<br />
-<input type="radio" name="united" value="0" />the state where you live<br />
-<input type="radio" name="united" value="0" />the President<br />
-<input type="radio" name="united" value="1" />the United States<br />
+<input type="radio" id="mc" name="question37" value="Congress" />Congress<br />
+<input type="radio" id="mc" name="question37" value="the state where you live" />the state where you live<br />
+<input type="radio" id="mc" name="question37" value="the President" />the President<br />
+<input type="radio" id="mc" name="question37" value="the United States" />the United States<br />
 
 <h2>38. What do we call the first ten amendments to the Constitution?</h2>
-<input type="radio" name="bill" value="0" />the inalienable rights<br />
-<input type="radio" name="bill" value="0" />the declaration of independence<br />
-<input type="radio" name="bill" value="1" />the Bill of Rights<br />
-<input type="radio" name="bill" value="0" />the Articles of Confederation<br />
+<input type="radio" id="mc" name="question38" value="the inalienable rights" />the inalienable rights<br />
+<input type="radio" id="mc" name="question38" value="the declaration of independence" />the declaration of independence<br />
+<input type="radio" id="mc" name="question38" value="the Bill of Rights" />the Bill of Rights<br />
+<input type="radio" id="mc" name="question38" value="the Articles of Confederation" />the Articles of Confederation<br />
 
 <h2>39. How many amendments does the Constitution have?</h2>
-<input type="radio" name="amend" value="0" />23<br />
-<input type="radio" name="amend" value="0" />10<br />
-<input type="radio" name="amend" value="0" />21<br />
-<input type="radio" name="amend" value="1" />27<br />
+<input type="radio" id="mc" name="question39" value="23" />23<br />
+<input type="radio" id="mc" name="question39" value="10" />10<br />
+<input type="radio" id="mc" name="question39" value="21" />21<br />
+<input type="radio" id="mc" name="question39" value="27" />27<br />
 
 <h2>40. Who was President during the Great Depression and World War II?</h2>
-<input type="radio" name="depress" value="0" />Calvin Collidge<br />
-<input type="radio" name="depress" value="1" />Franklin Roosevelt<br />
-<input type="radio" name="depress" value="0" />Harry Truman<br />
-<input type="radio" name="depress" value="0" />Herbert Hoover<br />
+<input type="radio" id="mc" name="question40" value="Calvin Collidge" />Calvin Collidge<br />
+<input type="radio" id="mc" name="question40" value="Franklin Roosevelt" />Franklin Roosevelt<br />
+<input type="radio" id="mc" name="question40" value="Harry Truman" />Harry Truman<br />
+<input type="radio" id="mc" name="question40" value="Herbert Hoover" />Herbert Hoover<br />
 
 <h2>41. If the President can no longer serve, who becomes President?</h2>
-<input type="radio" name="who" value="1" />the Vice President<br />
-<input type="radio" name="who" value="0" />the Secretary of State<br />
-<input type="radio" name="who" value="0" />the Speaker of the House<br />
-<input type="radio" name="who" value="0" />the President Pro Tempore<br />
+<input type="radio" id="mc" name="question41" value="the Vice President" />the Vice President<br />
+<input type="radio" id="mc" name="question41" value="the Secretary of State" />the Secretary of State<br />
+<input type="radio" id="mc" name="question41" value="the Speaker of the House" />the Speaker of the House<br />
+<input type="radio" id="mc" name="question41" value="the President Pro Tempore" />the President Pro Tempore<br />
 
 <h2>42. Before he was President, Eisenhower was a general. What war was he in?</h2>
-<input type="radio" name="general" value="0" />Spanish American War<br />
-<input type="radio" name="general" value="0" />Vietman War<br />
-<input type="radio" name="general" value="0" />Civil War<br />
-<input type="radio" name="general" value="1" />World War 2<br />
+<input type="radio" id="mc" name="question42" value="Spanish American War" />Spanish American War<br />
+<input type="radio" id="mc" name="question42" value="Vietman War" />Vietman War<br />
+<input type="radio" id="mc" name="question42" value="Civil War" />Civil War<br />
+<input type="radio" id="mc" name="question42" value="World War 2" />World War 2<br />
 
 <h2>43. When is the last day you can send in federal income tax forms?</h2>
-<input type="radio" name="sub" value="1" />April 15<br />
-<input type="radio" name="sub" value="0" />March 15<br />
-<input type="radio" name="sub" value="0" />July 4<br />
-<input type="radio" name="sub" value="0" />May 15<br />
+<input type="radio" id="mc" name="question43" value="April 15" />April 15<br />
+<input type="radio" id="mc" name="question43" value="March 15" />March 15<br />
+<input type="radio" id="mc" name="question43" value="July 4" />July 4<br />
+<input type="radio" id="mc" name="question43" value="May 15" />May 15<br />
 
 <h2>44. Name one American Indian tribe in the United States.</h2>
-<input type="radio" name="indian" value="0" />Celts<br />
-<input type="radio" name="indian" value="0" />Slavs<br />
-<input type="radio" name="indian" value="0" />Zawi Chemi<br />
-<input type="radio" name="indian" value="1" />Cherokee<br />
+<input type="radio" id="mc" name="question44" value="Celts" />Celts<br />
+<input type="radio" id="mc" name="question44" value="Slavs" />Slavs<br />
+<input type="radio" id="mc" name="question44" value="Zawi Chemi" />Zawi Chemi<br />
+<input type="radio" id="mc" name="question44" value="Cherokee" />Cherokee<br />
 
 <h2>45. What did Susan B. Anthony do?</h2>
-<input type="radio" name="susan" value="1" />fought for women's rights<br />
-<input type="radio" name="susan" value="0" />the first women elected to the House of Representatives<br />
-<input type="radio" name="susan" value="0" />founded the Red Cross<br />
-<input type="radio" name="susan" value="0" />made the first flag of the United States<br />
+<input type="radio" id="mc" name="question45" value="fought for women's rights" />fought for women's rights<br />
+<input type="radio" id="mc" name="question45" value="the first women elected to the House of Representatives" />the first women elected to the House of Representatives<br />
+<input type="radio" id="mc" name="question45" value="founded the Red Cross" />founded the Red Cross<br />
+<input type="radio" id="mc" name="question45" value="made the first flag of the United States" />made the first flag of the United States<br />
 
 <h2>46. What movement tried to end racial discrimination?</h2>
-<input type="radio" name="race" value="0" />conservation<br />
-<input type="radio" name="race" value="1" />civil rights movement<br />
-<input type="radio" name="race" value="0" />prohibition<br />
-<input type="radio" name="race" value="0" />women's sufferage<br />
+<input type="radio" id="mc" name="question46" value="conservation" />conservation<br />
+<input type="radio" id="mc" name="question46" value="civil rights movement" />civil rights movement<br />
+<input type="radio" id="mc" name="question46" value="prohibition" />prohibition<br />
+<input type="radio" id="mc" name="question46" value="women's sufferage" />women's sufferage<br />
 
 <h2>47. What is the capital of the United States?</h2>
-<input type="radio" name="cap" value="0" />Philadelphia, PA<br />
-<input type="radio" name="cap" value="0" />Boston, MA<br />
-<input type="radio" name="cap" value="0" />Washington. D.C<br />
-<input type="radio" name="cap" value="0" />New York, NY<br />
+<input type="radio" id="mc" name="question47" value="Philadelphia, PA" />Philadelphia, PA<br />
+<input type="radio" id="mc" name="question47" value="Boston, MA" />Boston, MA<br />
+<input type="radio" id="mc" name="question47" value="Washington. D.C" />Washington. D.C<br />
+<input type="radio" id="mc" name="question47" value="New York, NY" />New York, NY<br />
 
 <h2>48. Who is the Chief Justice of the United States now?</h2>
-<input type="radio" name="justice" value="1" />John G. Roberts, Jr.<br />
-<input type="radio" name="justice" value="0" />Joe Biden<br />
-<input type="radio" name="justice" value="0" />Anthony Kennedy<br />
-<input type="radio" name="justice" value="0" />Barack Obama<br />
+<input type="radio" id="mc" name="question48" value="John G. Roberts, Jr." />John G. Roberts, Jr.<br />
+<input type="radio" id="mc" name="question48" value="Joe Biden" />Joe Biden<br />
+<input type="radio" id="mc" name="question48" value="Anthony Kennedy" />Anthony Kennedy<br />
+<input type="radio" id="mc" name="question48" value="Barack Obama" />Barack Obama<br />
 
 <h2>49. What does the Judicial branch do?</h2>
-<input type="radio" name="jud" value="0" />decide if a law goes against the Constituiton<br />
-<input type="radio" name="jud" value="0" />resolves disputes<br />
-<input type="radio" name="jud" value="0" />reviews laws<br />
-<input type="radio" name="jud" value="1" />all of these answers<br />
+<input type="radio" id="mc" name="question49" value="decide if a law goes against the Constituiton" />decide if a law goes against the Constituiton<br />
+<input type="radio" id="mc" name="question49" value="resolves disputes" />resolves disputes<br />
+<input type="radio" id="mc" name="question49" value="reviews laws" />reviews laws<br />
+<input type="radio" id="mc" name="question49" value="all of these answers" />all of these answers<br />
 
 <h2>50. What is the "rule of law"?</h2>
-<input type="radio" name="rule" value="0" />Everyone but the President must follow the law.<br />
-<input type="radio" name="rule" value="0" />All laws must be the same in every state.<br />
-<input type="radio" name="rule" value="0" />Government does not have to follow the law.<br />
-<input type="radio" name="rule" value="1" />Everyone must follow the law.<br />
+<input type="radio" id="mc" name="question50" value="Everyone but the President must follow the law." />Everyone but the President must follow the law.<br />
+<input type="radio" id="mc" name="question50" value="All laws must be the same in every state." />All laws must be the same in every state.<br />
+<input type="radio" id="mc" name="question50" value="Government does not have to follow the law." />Government does not have to follow the law.<br />
+<input type="radio" id="mc" name="question50" value="Everyone must follow the law.<br />
+" />Everyone must follow the law.<br />
 
 <h2>51. What is one thing Benjamin Franklin is famous for?</h2>
-<input type="radio" name="ben" value="1" />U.S diplomat<br />
-<input type="radio" name="ben" value="0" />youngest member of the Constitutional Convention<br />
-<input type="radio" name="ben" value="0" />third president of theUnited States<br />
-<input type="radio" name="ben" value="0" />inventor of the airplane<br />
+<input type="radio" id="mc" name="question51" value="U.S diplomat" />U.S diplomat<br />
+<input type="radio" id="mc" name="question51" value="youngest member of the Constitutional Convention" />youngest member of the Constitutional Convention<br />
+<input type="radio" id="mc" name="question51" value="third president of theUnited States" />third president of theUnited States<br />
+<input type="radio" id="mc" name="question51" value="inventor of the airplane" />inventor of the airplane<br />
 
 <h2>52. What is one reason colonists came to America?</h2>
-<input type="radio" name="came" value="1" />freedom <br />
-<input type="radio" name="came" value="0" />for the experience traveling across the ocean<br />
-<input type="radio" name="came" value="0" />to join a civic group <br />
-<input type="radio" name="came" value="0" />none of these answers<br />
+<input type="radio" id="mc" name="question52" value="freedom" />freedom <br />
+<input type="radio" id="mc" name="question52" value="for the experience traveling across the ocean" />for the experience traveling across the ocean<br />
+<input type="radio" id="mc" name="question52" value="to join a civic group" />to join a civic group <br />
+<input type="radio" id="mc" name="question52" value="none of these answers" />none of these answers<br />
 
 <h2>53. Under our Constitution, some powers belong to the federal government. What is one power of the federal government?</h2>
-<input type="radio" name="fed" value="1" />to declar war<br />
-<input type="radio" name="fed" value="0" />to issue driver's licenses<br />
-<input type="radio" name="fed" value="0" />to provide schooling and education<br />
-<input type="radio" name="fed" value="0" />to provide protection(police)<br />
+<input type="radio" id="mc" name="question53" value="to declar war" />to declar war<br />
+<input type="radio" id="mc" name="question53" value="to issue driver's licenses" />to issue driver's licenses<br />
+<input type="radio" id="mc" name="question53" value="to provide schooling and education" />to provide schooling and education<br />
+<input type="radio" id="mc" name="question53" value="to provide protection(police)" />to provide protection(police)<br />
 
 <h2>54. We elect a U.S. Representative for how many years?</h2>
-<input type="radio" name="four" value="1" />2<br />
-<input type="radio" name="four" value="0" />8<br />
-<input type="radio" name="four" value="0" />6<br />
-<input type="radio" name="four" value="0" />4<br />
+<input type="radio" id="mc" name="question54" value="2" />2<br />
+<input type="radio" id="mc" name="question54" value="8" />8<br />
+<input type="radio" id="mc" name="question54" value="6" />6<br />
+<input type="radio" id="mc" name="question54" value="4" />4<br />
 
 <h2>55. Name two national U.S. holidays.</h2>
-<input type="radio" name="thanks" value="1" />Labor Day and Thanksgiving<br />
-<input type="radio" name="thanks" value="0" />Valentine's Day and Presidents' Day<br />
-<input type="radio" name="thanks" value="0" />April Fool's Day and Labor Day<br />
-<input type="radio" name="thanks" value="0" />Citizenship Day and Columbus Day<br />
+<input type="radio" id="mc" name="question55" value="Labor Day and Thanksgiving" />Labor Day and Thanksgiving<br />
+<input type="radio" id="mc" name="question55" value="Valentine's Day and Presidents' Day" />Valentine's Day and Presidents' Day<br />
+<input type="radio" id="mc" name="question55" value="April Fool's Day and Labor Day" />April Fool's Day and Labor Day<br />
+<input type="radio" id="mc" name="question55" value="Citizenship Day and Columbus Day" />Citizenship Day and Columbus Day<br />
 
 <h2>56. Name the U.S. war between the North and the South.</h2>
-<input type="radio" name="civil" value="1" />Civil War<br />
-<input type="radio" name="civil" value="0" />World War 1<br />
-<input type="radio" name="civil" value="0" />The revolutionary War<br />
-<input type="radio" name="civil" value="0" />the War of 1812<br />
+<input type="radio" id="mc" name="question56" value="Civil War" />Civil War<br />
+<input type="radio" id="mc" name="question56" value="World War 1" />World War 1<br />
+<input type="radio" id="mc" name="question56" value="The revolutionary War" />The revolutionary War<br />
+<input type="radio" id="mc" name="question56" value="the War of 1812" />the War of 1812<br />
 
 <h2>57. What are two rights in the Declaration of Independence?</h2>
-<input type="radio" name="2right" value="0" />life and right to own a home<br />
-<input type="radio" name="2right" value="1" />life and pursuit of happiness<br />
-<input type="radio" name="2right" value="0" />liberty and justice<br />
-<input type="radio" name="2right" value="0" />life and death<br />
+<input type="radio" id="mc" name="question57" value="life and right to own a home" />life and right to own a home<br />
+<input type="radio" id="mc" name="question57" value="life and pursuit of happiness" /><br />
+<input type="radio" id="mc" name="question57" value="liberty and justice" />liberty and justice<br />
+<input type="radio" id="mc" name="question57" value="life and death" />life and death<br />
 
 <h2>58. What is the economic system in the United States?</h2>
-<input type="radio" name="capitalist" value="0" />socialist economy<br />
-<input type="radio" name="capitalist" value="0" />communist economy<br />
-<input type="radio" name="capitalist" value="1" />capitalist ceconomy<br />
-<input type="radio" name="capitalist" value="0" />none of the answers<br />
+<input type="radio" id="mc" name="question58" value="socialist economy" />socialist economy<br />
+<input type="radio" id="mc" name="question58" value="communist economy" />communist economy<br />
+<input type="radio" id="mc" name="question58" value="capitalist economy" />capitalist economy<br />
+<input type="radio" id="mc" name="question58" value="none of the answers" />none of the answers<br />
 
 <h2>59. When must all men register for the Selective Service?</h2>
-<input type="radio" name="men" value="0" />at any age<br />
-<input type="radio" name="men" value="0" />at age sixteen<br />
-<input type="radio" name="men" value="1" />between 18 and 26<br />
-<input type="radio" name="men" value="0" />men don't have to register<br />
+<input type="radio" id="mc" name="question59" value="at any age" />at any age<br />
+<input type="radio" id="mc" name="question59" value="at age sixteen" />at age sixteen<br />
+<input type="radio" id="mc" name="question59" value="between 18 and 26" />between 18 and 26<br />
+<input type="radio" id="mc" name="question59" value="men don't have to register" />men don't have to register<br />
 
 <h2>60. What is the highest court in the United States?</h2>
-<input type="radio" name="supreme" value="0" />the Court of Appeals<br />
-<input type="radio" name="supreme" value="0" />the Federal Court<br />
-<input type="radio" name="supreme" value="1" />the Supreme Court<br />
-<input type="radio" name="supreme" value="0" />the District Court<br />
+<input type="radio" id="mc" name="question60" value="the Court of Appeals" />the Court of Appeals<br />
+<input type="radio" id="mc" name="question60" value="the Federal Court" />the Federal Court<br />
+<input type="radio" id="mc" name="question60" value="the Supreme Court" />the Supreme Court<br />
+<input type="radio" id="mc" name="question60" value="the District Court" />the District Court<br />
 
 <h2>61. Name one state that borders Canada.</h2>
-<input type="radio" name="Maine" value="0" />Rhode Island<br />
-<input type="radio" name="Maine" value="0" />South Dokata<br />
-<input type="radio" name="Maine" value="1" />Maine<br />
-<input type="radio" name="Maine" value="0" />Oregon<br />
+<input type="radio" id="mc" name="question61" value="Rhode Island" />Rhode Island<br />
+<input type="radio" id="mc" name="question61" value="South Dokata" />South Dokata<br />
+<input type="radio" id="mc" name="question61" value="Maine" />Maine<br />
+<input type="radio" id="mc" name="question61" value="Oregon" />Oregon<br />
 
 <h2>62. The Federalist Papers supported the passage of the U.S. Constitution. Name one of the writers.</h2>
-<input type="radio" name="James" value="0" />John Adams<br />
-<input type="radio" name="James" value="0" />Thomas Jefferson<br />
-<input type="radio" name="James" value="1" />James Madison<br />
-<input type="radio" name="James" value="0" />George Washington<br />
+<input type="radio" id="mc" name="question62" value="John Adams" />John Adams<br />
+<input type="radio" id="mc" name="question62" value="Thomas Jefferson" />Thomas Jefferson<br />
+<input type="radio" id="mc" name="question62" value="James Madison" />James Madison<br />
+<input type="radio" id="mc" name="question62" value="George Washington" />George Washington<br />
 
 <h2>63. Who vetoes bills?</h2>
-<input type="radio" name="no" value="1" />the President<br />
-<input type="radio" name="no" value="0" />the President Pro Tempore<br />
-<input type="radio" name="no" value="0" />the Vice President<br />
-<input type="radio" name="no" value="0" />the Speaker of the House<br />
+<input type="radio" id="mc" name="question63" value="the President" />the President<br />
+<input type="radio" id="mc" name="question63" value="the President Pro Tempore" />the President Pro Tempore<br />
+<input type="radio" id="mc" name="question63" value="the Vice President" />the Vice President<br />
+<input type="radio" id="mc" name="question63" value="the Speaker of the House" />the Speaker of the House<br />
 
 <h2>64. Name one branch or part of the government.</h2>
-<input type="radio" name="ifstate" value="1" />Congress<br />
-<input type="radio" name="ifstate" value="0" />United Nations<br />
-<input type="radio" name="ifstate" value="0" />Parliament<br />
-<input type="radio" name="ifstate" value="0" />state government<br />
+<input type="radio" id="mc" name="question64" value="Congress" />Congress<br />
+<input type="radio" id="mc" name="question64" value="United Nations" />United Nations<br />
+<input type="radio" id="mc" name="question64" value="Parliament" />Parliament<br />
+<input type="radio" id="mc" name="question64" value="state government" />state government<br />
 
 <h2>65. Name one of the two longest rivers in the United States.</h2>
-<input type="radio" name="miss" value="0" />Rio Grande River<br />
-<input type="radio" name="miss" value="0" />Colorado River<br />
-<input type="radio" name="miss" value="0" />Ohio River<br />
-<input type="radio" name="miss" value="1" />Mississipi River<br />
+<input type="radio" id="mc" name="question65" value="Rio Grande River" />Rio Grande River<br />
+<input type="radio" id="mc" name="question65" value="Colorado River" />Colorado River<br />
+<input type="radio" id="mc" name="question65" value="Ohio River" />Ohio River<br />
+<input type="radio" id="mc" name="question65" value="Mississipi River" />Mississipi River<br />
 
 <h2>66. What territory did the United States buy from France in 1803?</h2>
-<input type="radio" name="Louisiana" value="0" />Alaska <br />
-<input type="radio" name="Louisiana" value="0" />Hawaii<br />
-<input type="radio" name="Louisiana" value="1" />the Louisiana Territory<br />
-<input type="radio" name="Louisiana" value="0" />Quebec<br />
+<input type="radio" id="mc" name="question66" value="Alaska" />Alaska <br />
+<input type="radio" id="mc" name="question66" value="Hawaii" />Hawaii<br />
+<input type="radio" id="mc" name="question66" value="the Louisiana Territory" />the Louisiana Territory<br />
+<input type="radio" id="mc" name="question66" value="Quebec" />Quebec<br />
 
 <h2>67. What is an amendment?</h2>
-<input type="radio" name="change" value="0" />an Introduction<br />
-<input type="radio" name="change" value="0" />the beginning of the Declaration of Independence<br />
-<input type="radio" name="change" value="0" />the preamble to the Constitution<br />
-<input type="radio" name="change" value="1" />a change(to the Constituion)<br />
+<input type="radio" id="mc" name="question67" value="an Introduction" />an Introduction<br />
+<input type="radio" id="mc" name="question67" value="the beginning of the Declaration of Independence" />the beginning of the Declaration of Independence<br />
+<input type="radio" id="mc" name="question67" value="the preamble to the Constitution" />the preamble to the Constitution<br />
+<input type="radio" id="mc" name="question67" value="a change to the Constituion" />a changeto the Constituion<br />
 
 <h2>68. Who makes federal laws?</h2>
-<input type="radio" name="pres" value="1" />Congress<br />
-<input type="radio" name="pres" value="0" />the Supreme Court<br />
-<input type="radio" name="pres" value="0" />the President<br />
-<input type="radio" name="pres" value="0" />the State<br />
+<input type="radio" id="mc" name="question68" value="Congress" />Congress<br />
+<input type="radio" id="mc" name="question68" value="the Supreme Court" />the Supreme Court<br />
+<input type="radio" id="mc" name="question68" value="the President" />the President<br />
+<input type="radio" id="mc" name="question68" value="the State" />the State<br />
 
 <h2>69. The House of Representatives has how many voting members?</h2>
-<input type="radio" name="many" value="0" />200<br />
-<input type="radio" name="many" value="0" />441<br />
-<input type="radio" name="many" value="1" />435<br />
-<input type="radio" name="many" value="0" />100<br />
+<input type="radio" id="mc" name="question69" value="200" />200<br />
+<input type="radio" id="mc" name="question69" value="441" />441<br />
+<input type="radio" id="mc" name="question69" value="435" />435<br />
+<input type="radio" id="mc" name="question69" value="100" />100<br />
 
 <h2>70. Name one war fought by the United States in the 1800s.</h2>
-<input type="radio" name="mex" value="1" />Mexican-American War<br />
-<input type="radio" name="mex" value="0" />World War II<br />
-<input type="radio" name="mex" value="0" />World War I<br />
-<input type="radio" name="mex" value="0" />Korean War<br />
+<input type="radio" id="mc" name="question70" value="Mexican-American War" />Mexican-American War<br />
+<input type="radio" id="mc" name="question70" value="World War II" />World War II<br />
+<input type="radio" id="mc" name="question70" value="World War I" />World War I<br />
+<input type="radio" id="mc" name="question70" value="Korean War" />Korean War<br />
 
 <h2>71. What group of people was taken to America and sold as slaves?</h2>
-<input type="radio" name="Africans" value="0" />English<br />
-<input type="radio" name="Africans" value="0" />Dutch<br />
-<input type="radio" name="Africans" value="0" />Canadians<br />
-<input type="radio" name="Africans" value="1" />Africans<br />
+<input type="radio" id="mc" name="question71" value="English" />English<br />
+<input type="radio" id="mc" name="question71" value="Dutch" />Dutch<br />
+<input type="radio" id="mc" name="question71" value="Canadians" />Canadians<br />
+<input type="radio" id="mc" name="question71" value="Africans" />Africans<br />
 
 <h2>72. Who was President during World War I?</h2>
-<input type="radio" name="wood" value="0" />Theodore Roosevelt<br />
-<input type="radio" name="wood" value="1" />Woodrow Wilson<br />
-<input type="radio" name="wood" value="0" />Franklin Roosevelt<br />
-<input type="radio" name="wood" value="0" />Warren Harding<br />
+<input type="radio" id="mc" name="question72" value="Theodore Roosevelt" />Theodore Roosevelt<br />
+<input type="radio" id="mc" name="question72" value="Woodrow Wilson" />Woodrow Wilson<br />
+<input type="radio" id="mc" name="question72" value="Franklin Roosevelt" />Franklin Roosevelt<br />
+<input type="radio" id="mc" name="question72" value="Warren Harding" />Warren Harding<br />
 
 <h2>73. Who did the United States fight in World War II?</h2>
-<input type="radio" name="jap" value="0" />Austria-Hungary, Japan, and Germany<br />
-<input type="radio" name="jap" value="1" />Japan, Germany, and Italy<br />
-<input type="radio" name="jap" value="0" />Japan, China, and Vietnam<br />
-<input type="radio" name="jap" value="0" />the Soviet Union, Germany, and Italy<br />
+<input type="radio" id="mc" name="question73" value="Austria-Hungary, Japan, and Germany" />Austria-Hungary, Japan, and Germany<br />
+<input type="radio" id="mc" name="question73" value="Japan, Germany, and Italy" />Japan, Germany, and Italy<br />
+<input type="radio" id="mc" name="question73" value="Japan, China, and Vietnam" />Japan, China, and Vietnam<br />
+<input type="radio" id="mc" name="question73" value="the Soviet Union, Germany, and Italy" />the Soviet Union, Germany, and Italy<br />
 
 <h2>74. What is the name of the Vice President of the United States now?</h2>
-<input type="radio" name="mike" value="0" />Donald J. Trump<br />
-<input type="radio" name="mike" value="0" />Dick Cheney<br />
-<input type="radio" name="mike" value="0" />Joe Biden<br />
-<input type="radio" name="mike" value="1" />Mike Pence<br />
+<input type="radio" id="mc" name="question74" value="Donald J. Trump" />Donald J. Trump<br />
+<input type="radio" id="mc" name="question74" value="Dick Cheney" />Dick Cheney<br />
+<input type="radio" id="mc" name="question74" value="Joe Biden" />Joe Biden<br />
+<input type="radio" id="mc" name="question74" value="Mike Pence" />Mike Pence<br />
 
 <h2>75. Name one war fought by the United States in the 1900s.</h2>
-<input type="radio" name="ww" value="0" />War of 1812<br />
-<input type="radio" name="ww" value="0" />Revolutionary War<br />
-<input type="radio" name="ww" value="0" />Civil War<br />
-<input type="radio" name="ww" value="1" />World War 1<br />
+<input type="radio" id="mc" name="question75" value="War of 1812" />War of 1812<br />
+<input type="radio" id="mc" name="question75" value="Revolutionary War" />Revolutionary War<br />
+<input type="radio" id="mc" name="question75" value="Civil War" />Civil War<br />
+<input type="radio" id="mc" name="question75" value="World War 1" />World War 1<br />
 
 <h2>76. What is one promise you make when you become a United States citizen?</h2>
-<input type="radio" name="loyalty" value="0" />never travel outside the United States<br />
-<input type="radio" name="loyalty" value="0" />disobey the laws of the United States<br />
-<input type="radio" name="loyalty" value="0" />not defend the Constitution and laws of the United States<br />
-<input type="radio" name="loyalty" value="1" />give up loyalty to other countries<br />
+<input type="radio" id="mc" name="question76" value="never travel outside the United States" />never travel outside the United States<br />
+<input type="radio" id="mc" name="question76" value="disobey the laws of the United States" />disobey the laws of the United States<br />
+<input type="radio" id="mc" name="question76" value="not defend the Constitution and laws of the United States" />not defend the Constitution and laws of the United States<br />
+<input type="radio" id="mc" name="question76" value="give up loyalty to other countries" />give up loyalty to other countries<br />
 
 <h2>77. Who wrote the Declaration of Independence?</h2>
-<input type="radio" name="tom" value="0" />James Madison<br />
-<input type="radio" name="tom" value="0" />Thomas Jefferson<br />
-<input type="radio" name="tom" value="0" />Abraham Lincoln<br />
-<input type="radio" name="tom" value="0" />George Washington<br />
+<input type="radio" id="mc" name="question77" value="James Madison" />James Madison<br />
+<input type="radio" id="mc" name="question77" value="Thomas Jefferson" />Thomas Jefferson<br />
+<input type="radio" id="mc" name="question77" value="Abraham Lincoln" />Abraham Lincoln<br />
+<input type="radio" id="mc" name="question77" value="George Washington" />George Washington<br />
 
 <h2>78. We elect a U.S. Senator for how many years?</h2>
-<input type="radio" name="yrs" value="1" />6<br />
-<input type="radio" name="yrs" value="0" />10<br />
-<input type="radio" name="yrs" value="0" />2<br />
-<input type="radio" name="yrs" value="0" />4<br />
+<input type="radio" id="mc" name="question78" value="6" />6<br />
+<input type="radio" id="mc" name="question78" value="10" />10<br />
+<input type="radio" id="mc" name="question78" value="2" />2<br />
+<input type="radio" id="mc" name="question78" value="4" />4<br />
 
 <h2>79. When was the Declaration of Independence adopted?</h2>
-<input type="radio" name="adopt" value="0" />July 4, 1776<br />
-<input type="radio" name="adopt" value="1" />July4, 1789<br />
-<input type="radio" name="adopt" value="0" />December 7, 1787<br />
-<input type="radio" name="adopt" value="0" />March 4, 1789<br />
+<input type="radio" id="mc" name="question79" value="July 4, 1776" />July 4, 1776<br />
+<input type="radio" id="mc" name="question79" value="July 4, 1789" />July 4, 1789<br />
+<input type="radio" id="mc" name="question79" value="December 7, 1787" />December 7, 1787<br />
+<input type="radio" id="mc" name="question79" value="March 4, 1789" />March 4, 1789<br />
 
 <h2>80. There are four amendments to the Constitution about who can vote. Describe one of them.</h2>
-<input type="radio" name="older" value="0" />Only citizens with a job can vote.<br />
-<input type="radio" name="older" value="0" />Citizens by birth only can vote<br />
-<input type="radio" name="older" value="0" />Citzens 17 and older can vote.<br />
-<input type="radio" name="older" value="1" />Citizens 18 and older can vote.<br />
+<input type="radio" id="mc" name="question80" value="Only citizens with a job can vote." />Only citizens with a job can vote.<br />
+<input type="radio" id="mc" name="question80" value="Citizens by birth only can vote." />Citizens by birth only can vote.<br />
+<input type="radio" id="mc" name="question80" value="Citzens 17 and older can vote." />Citzens 17 and older can vote.<br />
+<input type="radio" id="mc" name="question80" value="Citizens 18 and older can vote." />Citizens 18 and older can vote.<br />
 
 <h2>81. What group of people was taken to America and sold as slaves?</h2>
-<input type="radio" name="afr" value="0" />English<br />
-<input type="radio" name="afr" value="0" />Canadians<br />
-<input type="radio" name="afr" value="1" />Africans<br />
-<input type="radio" name="afr" value="0" />Dutch<br />
+<input type="radio" id="mc" name="question81" value="English" />English<br />
+<input type="radio" id="mc" name="question81" value="Canadians" />Canadians<br />
+<input type="radio" id="mc" name="question81" value="Africans" />Africans<br />
+<input type="radio" id="mc" name="question81" value="Dutch" />Dutch<br />
 
 <h2>82. Name one state that borders Mexico.</h2>
-<input type="radio" name="cal" value="1" />California<br />
-<input type="radio" name="cal" value="0" />Alabama<br />
-<input type="radio" name="cal" value="0" />Florida<br />
-<input type="radio" name="cal" value="0" />Arkansas<br />
+<input type="radio" id="mc" name="question82" value="California" />California<br />
+<input type="radio" id="mc" name="question82" value="Alabama" />Alabama<br />
+<input type="radio" id="mc" name="question82" value="Florida" />Florida<br />
+<input type="radio" id="mc" name="question82" value="Arkansas" />Arkansas<br />
 
 <h2>83. How many justices are on the Supreme Court?</h2>
-<input type="radio" name="nine" value="0" />12<br />
-<input type="radio" name="nine" value="0" />11<br />
-<input type="radio" name="nine" value="1" />9<br />
-<input type="radio" name="nine" value="0" />10<br />
+<input type="radio" id="mc" name="question83" value="12" />12<br />
+<input type="radio" id="mc" name="question83" value="11" />11<br />
+<input type="radio" id="mc" name="question83" value="9" />9<br />
+<input type="radio" id="mc" name="question83" value="10" />10<br />
 
 <h2>84. What is the Supreme law of the land?</h2>
-<input type="radio" name="sup" value="1" />the constitution<br />
-<input type="radio" name="sup" value="0" />parliament<br />
-<input type="radio" name="sup" value="0" />assembly<br />
-<input type="radio" name="sup" value="0" />petition<br />
+<input type="radio" id="mc" name="question84" value="the constitution" />the constitution<br />
+<input type="radio" id="mc" name="question84" value="parliament" />parliament<br />
+<input type="radio" id="mc" name="question84" value="assembly" />assembly<br />
+<input type="radio" id="mc" name="question84" value="petition" />petition<br />
 
 <h2>85. What is the name of the national anthem?</h2>
-<input type="radio" name="nat" value="0" />I fall Apart<br />
-<input type="radio" name="nat" value="0" />Take me to the ball Game<br />
-<input type="radio" name="nat" value="1" />The Star Spangled Banner<br />
-<input type="radio" name="nat" value="0" />Deja Vu<br />
+<input type="radio" id="mc" name="question85" value="I fall Apart" />I fall Apart<br />
+<input type="radio" id="mc" name="question85" value="Take me to the ball Game" />Take me to the ball Game<br />
+<input type="radio" id="mc" name="question85" value="The Star Spangled Banner" />The Star Spangled Banner<br />
+<input type="radio" id="mc" name="question85" value="Deja Vu" />Deja Vu<br />
 
 <h2>86. Where is the Stature of Liberty?</h2>
-<input type="radio" name="stat" value="0" />Arizona<br />
-<input type="radio" name="stat" value="0" />Boston<br />
-<input type="radio" name="stat" value="1" />New York<br />
-<input type="radio" name="stat" value="0" />Lousianna<br />
+<input type="radio" id="mc" name="question86" value="Arizona" />Arizona<br />
+<input type="radio" id="mc" name="question86" value="Arizona" />Boston<br />
+<input type="radio" id="mc" name="question86" value="Arizona" />New York<br />
+<input type="radio" id="mc" name="question86" value="Arizona" />Lousianna<br />
 
 <h2>87. Name one problem that led to the civil war.</h2>
-<input type="radio" name="all" value="0" />slavery<br />
-<input type="radio" name="all" value="0" />economic reasons<br />
-<input type="radio" name="all" value="0" />rights<br />
-<input type="radio" name="all" value="1" />all of above<br />
+<input type="radio" id="mc" name="question87" value="slavery" />slavery<br />
+<input type="radio" id="mc" name="question87" value="economic reasons" />economic reasons<br />
+<input type="radio" id="mc" name="question87" value="rights" />rights<br />
+<input type="radio" id="mc" name="question87" value="all of the above" />all of the above<br />
 
 <h2>88. What are the first three words of the government idea?</h2>
-<input type="radio" name="we" value="0" />All us together<br />
-<input type="radio" name="we" value="1" />We the people<br />
-<input type="radio" name="we" value="0" />We love all<br />
-<input type="radio" name="we" value="0" />The great government<br />
+<input type="radio" id="mc" name="question88" value="All us together" />All us together<br />
+<input type="radio" id="mc" name="question88" value="We the people" />We the people<br />
+<input type="radio" id="mc" name="question88" value="We love all" />We love all<br />
+<input type="radio" id="mc" name="question88" value="The great government" />The great government<br />
 
 <h2>89. What are two rights in the Declaration of Independence? </h2>
-<input type="radio" name="liberty" value="1" />life, liberty<br />
-<input type="radio" name="liberty" value="0" />money, freedom<br />
-<input type="radio" name="liberty" value="0" />freedom, speech<br />
-<input type="radio" name="liberty" value="0" />money, car insurance<br />
+<input type="radio" id="mc" name="question89" value="life, liberty" />life, liberty<br />
+<input type="radio" id="mc" name="question89" value="money, freedom" />money, freedom<br />
+<input type="radio" id="mc" name="question89" value="freedom, speech" />freedom, speech<br />
+<input type="radio" id="mc" name="question89" value="money, car insurance" />money, car insurance<br />
 
 <h2>90. Who does a U.S. Senator represent?</h2>
-<input type="radio" name="peeps" value="1" />All the people in a state.<br />
-<input type="radio" name="peeps" value="0" />All U.S.<br />
-<input type="radio" name="peeps" value="0" />The universe<br />
-<input type="radio" name="peeps" value="0" />The galaxy<br />
+<input type="radio" id="mc" name="question90" value="All the people in a state." />All the people in a state.<br />
+<input type="radio" id="mc" name="question90" value="All U.S." />All U.S.<br />
+<input type="radio" id="mc" name="question90" value="The universe" />The universe<br />
+<input type="radio" id="mc" name="question90" value="The galaxy" />The galaxy<br />
 
 <h2>91. What was one important thing that Abraham Lincoln did? </h2>
-<input type="radio" name="end" value="0" />became president<br />
-<input type="radio" name="end" value="1" />ended slavery<br />
-<input type="radio" name="end" value="0" />stopped taxes<br />
-<input type="radio" name="end" value="0" />gave jobs<br />
+<input type="radio" id="mc" name="question91" value="became president" />became president<br />
+<input type="radio" id="mc" name="question91" value="ended slavery" />ended slavery<br />
+<input type="radio" id="mc" name="question91" value="stopped taxes" />stopped taxes<br />
+<input type="radio" id="mc" name="question91" value="gave jobs" />gave jobs<br />
 
 <h2>92. What ocean is on the East Coast of the United States?</h2>
-<input type="radio" name="atlantic" value="1" />Atlantic<br />
-<input type="radio" name="atlantic" value="0" />Pacific<br />
-<input type="radio" name="atlantic" value="0" />Oceanic<br />
-<input type="radio" name="atlantic" value="0" />Specific<br />
+<input type="radio" id="mc" name="question92" value="Atlantic" />Atlantic<br />
+<input type="radio" id="mc" name="question92" value="Pacific" />Pacific<br />
+<input type="radio" id="mc" name="question92" value="Oceanic" />Oceanic<br />
+<input type="radio" id="mc" name="question92" value="Specific" />Specific<br />
 
 <h2>93. Why does the flag have 13 stripes?</h2>
-<input type="radio" name="thirt" value="0" />13 wars<br />
-<input type="radio" name="thirt" value="0" />13 presidents<br />
-<input type="radio" name="thirt" value="1" />13 colonies<br />
-<input type="radio" name="thirt" value="0" />13 U.S. Senates<br />
+<input type="radio" id="mc" name="question93" value="13 wars" />13 wars<br />
+<input type="radio" id="mc" name="question93" value="13 presidents" />13 presidents<br />
+<input type="radio" id="mc" name="question93" value="13 colonies" />13 colonies<br />
+<input type="radio" id="mc" name="question93" value="13 U.S. Senates" />13 U.S. Senates<br />
 
 <h2>94. If both the President and the Vice President can no longer serve, who becomes President?</h2>
-<input type="radio" name="speaker" value="0" />Vice Vice President<br />
-<input type="radio" name="speaker" value="1" />Speaker of the House<br />
-<input type="radio" name="speaker" value="0" />Secretary<br />
-<input type="radio" name="speaker" value="0" />Janitor<br />
+<input type="radio" id="mc" name="question94" value="Vice Vice President" />Vice Vice President<br />
+<input type="radio" id="mc" name="question94" value="Speaker of the House" />Speaker of the House<br />
+<input type="radio" id="mc" name="question94" value="Secretary" />Secretary<br />
+<input type="radio" id="mc" name="question94" value="Janitor" />Janitor<br />
 
 <h2>95. Who signs bills to become laws? </h2>
-<input type="radio" name="who" value="0" />Liberal Party<br />
-<input type="radio" name="who" value="0" />Congress<br />
-<input type="radio" name="who" value="0" />Senate<br />
-<input type="radio" name="who" value="1" />President<br />
+<input type="radio" id="mc" name="question95" value="Liberal Party" />Liberal Party<br />
+<input type="radio" id="mc" name="question95" value="Congress" />Congress<br />
+<input type="radio" id="mc" name="question95" value="Senate" />Senate<br />
+<input type="radio" id="mc" name="question95" value="President" />President<br />
 
 <h2>96. Who is the Governor of California state now?</h2>
-<input type="radio" name="donald" value="0" />Donald Trump<br />
-<input type="radio" name="donald" value="0" />Mike Pence<br />
-<input type="radio" name="donald" value="0" />Barack Obama<br />
-<input type="radio" name="donald" value="1" />Jerry Brown<br />
+<input type="radio" id="mc" name="question96" value="Donald Trump" />Donald Trump<br />
+<input type="radio" id="mc" name="question96" value="Mike Pence" />Mike Pence<br />
+<input type="radio" id="mc" name="question96" value="Barack Obama" />Barack Obama<br />
+<input type="radio" id="mc" name="question96" value="Jerry Brown" />Jerry Brown<br />
 
 <h2>97. Who is the father of the constitution?</h2>
-<input type="radio" name="mup" value="0" />Thomas Jefferson<br />
-<input type="radio" name="mup" value="0" />George Washington<br />
-<input type="radio" name="mup" value="1" />James Madison<br />
-<input type="radio" name="mup" value="0" />Barack Obama<br />
+<input type="radio" id="mc" name="question97" value="Thomas Jefferson" />Thomas Jefferson<br />
+<input type="radio" id="mc" name="question97" value="George Washington" />George Washington<br />
+<input type="radio" id="mc" name="question97" value="James Madison" />James Madison<br />
+<input type="radio" id="mc" name="question97" value="Barack Obama" />Barack Obama<br />
 
 <h2>98. How many house of Reps are in Cali?</h2>
-<input type="radio" name="reps" value="0" />234<br />
-<input type="radio" name="reps" value="0" />345<br />
-<input type="radio" name="reps" value="1" />435<br />
-<input type="radio" name="reps" value="0" />786<br />
+<input type="radio" id="mc" name="question98" value="234" />234<br />
+<input type="radio" id="mc" name="question98" value="345" />345<br />
+<input type="radio" id="mc" name="question98" value="435" />435<br />
+<input type="radio" id="mc" name="question98" value="786" />786<br />
 
 <h2>99. Who is one of your state's U.S. Senators now?</h2>
-<input type="radio" name="dianne" value="1" />Dianne Feinstein<br />
-<input type="radio" name="dianne" value="0" />Donald Trump<br />
-<input type="radio" name="dianne" value="0" />Mike pence<br />
-<input type="radio" name="dianne" value="0" />Hillary CLinton<br />
+<input type="radio" id="mc" name="question99" value="Dianne Feinstein" />Dianne Feinstein<br />
+<input type="radio" id="mc" name="question99" value="Donald Trump" />Donald Trump<br />
+<input type="radio" id="mc" name="question99" value="Mike pence" />Mike pence<br />
+<input type="radio" id="mc" name="question99" value="Hillary CLinton" />Hillary CLinton<br />
 
 <h2>100. What is the capital of California?</h2>
-<input type="radio" name="sac" value="0" />New York<br />
-<input type="radio" name="sac" value="1" />Sacramento<br />
-<input type="radio" name="sac" value="0" />Los Angeles<br />
-<input type="radio" name="sac" value="0" />Big Bear<br />
+<input type="radio" id="mc" name="question100" value="New York" />New York<br />
+<input type="radio" id="mc" name="question100" value="Sacramento" />Sacramento<br />
+<input type="radio" id="mc" name="question100" value="Los Angeles" />Los Angeles<br />
+<input type="radio" id="mc" name="question100" value="Big Bear" />Big Bear<br />
 
-<input type="submit" value="submit">
+<input id = "button" type="button" value="submit " onclick="check();">
+
 </form>
 
+<div id = "after_submit">
 
-<p>Your grade is: <span id="grade">__</span></p>
-<p id="grade2"></p>
-</div><!-- close main div -->
+<!-- <p id="message"></p>
+ --><p id="message"></p>
+<p id ="number_correct">Thank You!</p>
+</div>
 
 
 <script>
-document.getElementById("form1").onsubmit=function() {
-    votevar = document.getElementsByName("vote");
-    	for(i=0; i<votevar.length; i++){
-		if(votevar[i].checked){
-		vscore = parseInt(votevar[i].value);
-       }
-       }
-
-	HoRvar = document.getElementsByName("HoR");
-	   	for(i=0; i<HoRvar.length; i++){
-       	if(HoRvar[i].checked){
-       	HoRscore = parseInt(HoRvar[i].value);
-       }
-       }
-
-	branchvar = document.getElementsByName("branch");
-	   	for(i=0; i<branchvar.length; i++){
-       	if(branchvar[i].checked){
-       	brscore = parseInt(branchvar[i].value);
-       }
-       }
-
-	ogstatesvar = document.getElementsByName("ogstates");
-	   	for(i=0; i<ogstatesvar.length; i++){
-       	if(ogstatesvar[i].checked){
-       	ogstatesscore = parseInt(ogstatesvar[i].value);
-       }
-   	   }
-
-   	convar = document.getElementsByName("con");
-	   	for(i=0; i<convar.length; i++){
-       	if(convar[i].checked){
-       	cscore = parseInt(convar[i].value);
-       }
-       }	
-
-    pwrvar = document.getElementsByName("pwr");
-    	for(i=0; i<pwrvar.length; i++){
-		if(pwrvar[i].checked){
-		pwrscore = parseInt(pwrvar[i].value);
-       }
-       }
-
-    ppvar = document.getElementsByName("pp");
-	   	for(i=0; i<ppvar.length; i++){
-       	if(ppvar[i].checked){
-       	ppscore = parseInt(ppvar[i].value);
-       }
-       }
-
-	twoRvar = document.getElementsByName("twoR");
-	   	for(i=0; i<twoRvar.length; i++){
-       	if(twoRvar[i].checked){
-       	twoRscore = parseInt(twoRvar[i].value);
-       }
-       }
-    warvar = document.getElementsByName("war");
-    	for(i=0; i<warvar.length; i++){
-		if(warvar[i].checked){
-		warscore = parseInt(warvar[i].value);
-       }
-       }
-
-	senvar = document.getElementsByName("sen");
-	   	for(i=0; i<senvar.length; i++){
-       	if(senvar[i].checked){
-       	senscore = parseInt(senvar[i].value);
-       }
-       }
-
-	firstPvar = document.getElementsByName("firstP");
-	   	for(i=0; i<firstPvar.length; i++){
-       	if(firstPvar[i].checked){
-       	firstPscore = parseInt(firstPvar[i].value);
-       }
-       }
-
-	demovar = document.getElementsByName("demo");
-	   	for(i=0; i<demovar.length; i++){
-       	if(demovar[i].checked){
-       	demoscore = parseInt(demovar[i].value);
-       }
-       }
-    provar = document.getElementsByName("pro");
-    	for(i=0; i<provar.length; i++){
-		if(provar[i].checked){
-		proscore = parseInt(provar[i].value);
-       }
-       }
-
-	2congressvar = document.getElementsByName("2congress");
-	   	for(i=0; i<2congressvar.length; i++){
-       	if(2congressvar[i].checked){
-       	2score = parseInt(2congressvar[i].value);
-       }
-       }
-
-	ppartyvar = document.getElementsByName("pparty");
-	   	for(i=0; i<ppartyvar.length; i++){
-       	if(ppartyvar[i].checked){
-       	cppartyscore = parseInt(ppartyvar[i].value);
-       }
-       }
-
-	starsvar = document.getElementsByName("stars");
-	   	for(i=0; i<starsvar.length; i++){
-       	if(starsvar[i].checked){
-       	starsscore = parseInt(starsvar[i].value);
-       }
-       }
-    electvar = document.getElementsByName("elect");
-    	for(i=0; i<electvar.length; i++){
-		if(electvar[i].checked){
-		electscore = parseInt(electvar[i].value);
-       }
-       }
-
-	otherSvar = document.getElementsByName("otherS");
-	   	for(i=0; i<otherSvar.length; i++){
-       	if(otherSvar[i].checked){
-       	otherSscore = parseInt(otherSvar[i].value);
-       }
-       }
-
-	cabinetvar = document.getElementsByName("cabinet");
-	   	for(i=0; i<cabinetvar.length; i++){
-       	if(cabinetvar[i].checked){
-       	cabinetscore = parseInt(cabinetvar[i].value);
-       }
-       }
-
-	coldvar = document.getElementsByName("cold");
-	   	for(i=0; i<coldvar.length; i++){
-       	if(coldvar[i].checked){
-       	coldscore = parseInt(coldvar[i].value);
-       }
-       }
-    exBvar = document.getElementsByName("exB");
-    	for(i=0; i<exBvar.length; i++){
-		if(exBvar[i].checked){
-		exBscore = parseInt(exBvar[i].value);
-       }
-       }
-
-	dadvar = document.getElementsByName("dad");
-	   	for(i=0; i<dadvar.length; i++){
-       	if(dadvar[i].checked){
-       	dadscore = parseInt(dadvar[i].value);
-       }
-       }
-
-	mlkvar = document.getElementsByName("mlk");
-	   	for(i=0; i<mlkvar.length; i++){
-       	if(mlkvar[i].checked){
-       	mlkscore = parseInt(mlkvar[i].value);
-       }
-       }
-
-	westCvar = document.getElementsByName("westC");
-	   	for(i=0; i<westCvar.length; i++){
-       	if(westCvar[i].checked){
-       	westCscore = parseInt(westCvar[i].value);
-       }
-       }
-    religionvar = document.getElementsByName("religion");
-    	for(i=0; i<religionvar.length; i++){
-		if(religionvar[i].checked){
-		religionscore = parseInt(religionvar[i].value);
-       }
-       }
-
-	tervar = document.getElementsByName("ter");
-	   	for(i=0; i<tervar.length; i++){
-       	if(tervar[i].checked){
-       	terscore = parseInt(tervar[i].value);
-       }
-       }
-
-	nsvar = document.getElementsByName("ns");
-	   	for(i=0; i<nsvar.length; i++){
-       	if(nsvar[i].checked){
-       	nsscore = parseInt(nsvar[i].value);
-       }
-       }
-
-	presCvar = document.getElementsByName("presC");
-	   	for(i=0; i<presCvar.length; i++){
-       	if(presCvar[i].checked){
-       	presCscore = parseInt(presCvar[i].value);
-       }
-       }
-    cChiefvar = document.getElementsByName("cChief");
-    	for(i=0; i<cChiefvar.length; i++){
-		if(cChiefvar[i].checked){
-		cChiefscore = parseInt(cChiefvar[i].value);
-       }
-       }
-
-	911var = document.getElementsByName("911");
-	   	for(i=0; i<911var.length; i++){
-       	if(911var[i].checked){
-       	911score = parseInt(911var[i].value);
-       }
-       }
-
-	responsiblevar = document.getElementsByName("responsible");
-	   	for(i=0; i<responsiblevar.length; i++){
-       	if(responsiblevar[i].checked){
-       	responsiblescore = parseInt(responsiblevar[i].value);
-       }
-       }
-
-	firevar = document.getElementsByName("fire");
-	   	for(i=0; i<firevar.length; i++){
-       	if(firevar[i].checked){
-       	firescore = parseInt(firevar[i].value);
-       }
-       }
-    dclvar = document.getElementsByName("dcl");
-    	for(i=0; i<dclvar.length; i++){
-		if(dclvar[i].checked){
-		dclscore = parseInt(dclvar[i].value);
-       }
-       }
-
-	livedvar = document.getElementsByName("lived");
-	   	for(i=0; i<livedvar.length; i++){
-       	if(livedvar[i].checked){
-       	livedscore = parseInt(livedvar[i].value);
-       }
-       }
-
-	colonistvar = document.getElementsByName("colonist");
-	   	for(i=0; i<colonistvar.length; i++){
-       	if(colonistvar[i].checked){
-       	colonistscore = parseInt(colonistvar[i].value);
-       }
-       }
-
-	writevar = document.getElementsByName("write");
-	   	for(i=0; i<writevar.length; i++){
-       	if(writevar[i].checked){
-       	writescore = parseInt(writevar[i].value);
-       }
-       }
-    unitedvar = document.getElementsByName("united");
-    	for(i=0; i<unitedvar.length; i++){
-		if(unitedvar[i].checked){
-		unitedscore = parseInt(unitedvar[i].value);
-       }
-       }
-
-	billvar = document.getElementsByName("bill");
-	   	for(i=0; i<billvar.length; i++){
-       	if(billvar[i].checked){
-       	billscore = parseInt(billvar[i].value);
-       }
-       }
-
-	amendvar = document.getElementsByName("amend");
-	   	for(i=0; i<amendvar.length; i++){
-       	if(amendvar[i].checked){
-       	amendscore = parseInt(amendvar[i].value);
-       }
-       }
-
-	depressvar = document.getElementsByName("depress");
-	   	for(i=0; i<depressvar.length; i++){
-       	if(depressvar[i].checked){
-       	depressscore = parseInt(depressvar[i].value);
-       }
-       }
-
-    whovar = document.getElementsByName("who");
-	   	for(i=0; i<whovar.length; i++){
-       	if(whovar[i].checked){
-       	whoscore = parseInt(whovar[i].value);
-       }
-       }
-
-	generalvar = document.getElementsByName("general");
-	   	for(i=0; i<generalvar.length; i++){
-       	if(generalvar[i].checked){
-       	generalscore = parseInt(generalvar[i].value);
-       }
-       }
-
-	subvar = document.getElementsByName("sub");
-	   	for(i=0; i<subvar.length; i++){
-       	if(subvar[i].checked){
-       	subscore = parseInt(subvar[i].value);
-       }
-       }
-
-    indianvar = document.getElementsByName("indian");
-	   	for(i=0; i<indianvar.length; i++){
-       	if(indianvar[i].checked){
-       	indianscore = parseInt(indianvar[i].value);
-       }
-       }
-
-	susanvar = document.getElementsByName("susan");
-	   	for(i=0; i<susanvar.length; i++){
-       	if(susanvar[i].checked){
-       	susanscore = parseInt(susanvar[i].value);
-       }
-       }
-
-	racevar = document.getElementsByName("race");
-	   	for(i=0; i<racevar.length; i++){
-       	if(racevar[i].checked){
-       	racescore = parseInt(racevar[i].value);
-       }
-       }
-    capvar = document.getElementsByName("cap");
-	   	for(i=0; i<capvar.length; i++){
-       	if(capvar[i].checked){
-       	capscore = parseInt(capvar[i].value);
-       }
-       }
-
-	justicevar = document.getElementsByName("justice");
-	   	for(i=0; i<justicevar.length; i++){
-       	if(justicevar[i].checked){
-       	justicescore = parseInt(justicevar[i].value);
-       }
-       }
-
-	judvar = document.getElementsByName("jud");
-	   	for(i=0; i<judvar.length; i++){
-       	if(judvar[i].checked){
-       	judscore = parseInt(judvar[i].value);
-       }
-       }
-
-    rulevar = document.getElementsByName("rule");
-	   	for(i=0; i<rulevar.length; i++){
-       	if(rulevar[i].checked){
-       	rulescore = parseInt(rulevar[i].value);
-       }
-       }
-
-	benvar = document.getElementsByName("ben");
-	   	for(i=0; i<benvar.length; i++){
-       	if(benvar[i].checked){
-       	benscore = parseInt(benvar[i].value);
-       }
-       }
-
-	camevar = document.getElementsByName("came");
-	   	for(i=0; i<camevar.length; i++){
-       	if(camevar[i].checked){
-       	camescore = parseInt(camevar[i].value);
-       }
-       }
-
-    fedvar = document.getElementsByName("fed");
-	   	for(i=0; i<fedvar.length; i++){
-       	if(fedvar[i].checked){
-       	fedscore = parseInt(fedvar[i].value);
-       }
-       }
-
-	fourvar = document.getElementsByName("four");
-	   	for(i=0; i<fourvar.length; i++){
-       	if(fourvar[i].checked){
-       	fourscore = parseInt(fourvar[i].value);
-       }
-       }
-
-	thanksvar = document.getElementsByName("thanks");
-	   	for(i=0; i<thanksvar.length; i++){
-       	if(thanksvar[i].checked){
-       	thanksscore = parseInt(thanksvar[i].value);
-       }
-       }
-
-    civilvar = document.getElementsByName("civil");
-	   	for(i=0; i<civilvar.length; i++){
-       	if(civilvar[i].checked){
-       	civilscore = parseInt(civilvar[i].value);
-       }
-       }
-
-	2rightvar = document.getElementsByName("2right");
-	   	for(i=0; i<2rightvar.length; i++){
-       	if(2rightvar[i].checked){
-       	2rightscore = parseInt(2rightvar[i].value);
-       }
-       }
-
-	capitalistvar = document.getElementsByName("capitalist");
-	   	for(i=0; i<capitalistvar.length; i++){
-       	if(capitalistvar[i].checked){
-       	capitalistscore = parseInt(capitalistvar[i].value);
-       }
-       }
-
-    menvar = document.getElementsByName("men");
-	   	for(i=0; i<menvar.length; i++){
-       	if(menvar[i].checked){
-       	menscore = parseInt(menvar[i].value);
-       }
-       }
-    supremevar = document.getElementsByName("supreme");
-	   	for(i=0; i<supremevar.length; i++){
-       	if(supremevar[i].checked){
-       	supremescore = parseInt(supremevar[i].value);
-       }
-       }
-    Mainevar = document.getElementsByName("Maine");
-	   	for(i=0; i<Mainevar.length; i++){
-       	if(Mainevar[i].checked){
-       	Mainescore = parseInt(Mainevar[i].value);
-       }
-       }
-
-    Jamesvar = document.getElementsByName("James");
-	   	for(i=0; i<Jamesvar.length; i++){
-       	if(Jamesvar[i].checked){
-       	Jamesscore = parseInt(Jamesvar[i].value);
-       }
-       }
-
-    novar = document.getElementsByName("no");
-	   	for(i=0; i<novar.length; i++){
-       	if(novar[i].checked){
-       	noscore = parseInt(novar[i].value);
-       }
-       }
-
-    ifstatevar = document.getElementsByName("ifstate");
-	   	for(i=0; i<ifstatevar.length; i++){
-       	if(ifstatevar[i].checked){
-       	ifstatescore = parseInt(ifstatevar[i].value);
-       }
-       }
-
-    missvar = document.getElementsByName("miss");
-	   	for(i=0; i<missvar.length; i++){
-       	if(missvar[i].checked){
-       	missscore = parseInt(missvar[i].value);
-       }
-       }
-
-    Louisianavar = document.getElementsByName("Louisiana");
-	   	for(i=0; i<Louisianavar.length; i++){
-       	if(Louisianavar[i].checked){
-       	Louisianascore = parseInt(Louisianavar[i].value);
-       }
-       }
-
-    changevar = document.getElementsByName("change");
-	   	for(i=0; i<changevar.length; i++){
-       	if(changevar[i].checked){
-       	changescore = parseInt(changevar[i].value);
-       }
-       }
-
-    presvar = document.getElementsByName("pres");
-	   	for(i=0; i<presvar.length; i++){
-       	if(presvar[i].checked){
-       	presscore = parseInt(presvar[i].value);
-       }
-       }
-
-    manyvar = document.getElementsByName("many");
-	   	for(i=0; i<manyvar.length; i++){
-       	if(manyvar[i].checked){
-       	manyscore = parseInt(manyvar[i].value);
-       }
-       }   
-
-    mexvar = document.getElementsByName("mex");
-	   	for(i=0; i<mexvar.length; i++){
-       	if(mexvar[i].checked){
-       	mexscore = parseInt(mexvar[i].value);
-       }
-       }   
-
-    Africansvar = document.getElementsByName("Africans");
-	   	for(i=0; i<Africansvar.length; i++){
-       	if(Africansvar[i].checked){
-       	Africansscore = parseInt(Africansvar[i].value);
-       }
-       }
-
-    woodvar = document.getElementsByName("wood");
-	   	for(i=0; i<woodvar.length; i++){
-       	if(woodvar[i].checked){
-       	woodscore = parseInt(woodvar[i].value);
-       }
-       }
-       
-    japvar = document.getElementsByName("jap");
-	   	for(i=0; i<japvar.length; i++){
-       	if(japvar[i].checked){
-       	japscore = parseInt(japvar[i].value);
-       }
-       }
-       
-    mikevar = document.getElementsByName("mike");
-	   	for(i=0; i<mikevar.length; i++){
-       	if(mikevar[i].checked){
-       	mikescore = parseInt(mikevar[i].value);
-       }
-       }
-       
-    wwvar = document.getElementsByName("ww");
-	   	for(i=0; i<wwvar.length; i++){
-       	if(wwvar[i].checked){
-       	wwscore = parseInt(wwvar[i].value);
-       }
-       }
-       
-    loyaltyvar = document.getElementsByName("loyalty");
-	   	for(i=0; i<loyaltyvar.length; i++){
-       	if(loyaltyvar[i].checked){
-       	loyaltyscore = parseInt(loyaltyvar[i].value);
-       }
-       }
-       
-    tomvar = document.getElementsByName("tom");
-	   	for(i=0; i<tomvar.length; i++){
-       	if(tomvar[i].checked){
-       	tomscore = parseInt(tomvar[i].value);
-       }
-       }
-     
-    yrsvar = document.getElementsByName("yrs");
-	   	for(i=0; i<yrsvar.length; i++){
-       	if(yrsvar[i].checked){
-       	yrsscore = parseInt(yrsvar[i].value);
-       }
-       }
-
-    adoptvar = document.getElementsByName("adopt");
-	   	for(i=0; i<adoptvar.length; i++){
-       	if(adoptvar[i].checked){
-       	adoptscore = parseInt(adoptvar[i].value);
-       }
-       }
-       
-    oldervar = document.getElementsByName("older");
-	   	for(i=0; i<oldervar.length; i++){
-       	if(oldervar[i].checked){
-       	olderscore = parseInt(oldervar[i].value);
-       }
-       }
-       
-    afrvar = document.getElementsByName("afr");
-	   	for(i=0; i<afrvar.length; i++){
-       	if(afrvar[i].checked){
-       	afrscore = parseInt(afrvar[i].value);
-       }
-       }
-       
-    calvar = document.getElementsByName("cal");
-	   	for(i=0; i<calvar.length; i++){
-       	if(calvar[i].checked){
-       	calscore = parseInt(calvar[i].value);
-       }
-       }
-       
-    ninevar = document.getElementsByName("nine");
-	   	for(i=0; i<ninevar.length; i++){
-       	if(ninevar[i].checked){
-       	ninescore = parseInt(ninevar[i].value);
-       }
-       }
-       
-    supvar = document.getElementsByName("sup");
-	   	for(i=0; i<supvar.length; i++){
-       	if(supvar[i].checked){
-       	supscore = parseInt(supvar[i].value);
-       }
-       }
-       
-    natvar = document.getElementsByName("nat");
-	   	for(i=0; i<natvar.length; i++){
-       	if(natvar[i].checked){
-       	natscore = parseInt(natvar[i].value);
-       }
-       }
-       
-    statvar = document.getElementsByName("stat");
-	   	for(i=0; i<statvar.length; i++){
-       	if(statvar[i].checked){
-       	statscore = parseInt(statvar[i].value);
-       }
-       }
-       
-    allvar = document.getElementsByName("all");
-	   	for(i=0; i<allvar.length; i++){
-       	if(allvar[i].checked){
-       	allscore = parseInt(allvar[i].value);
-       }
-       }
-       
-    wevar = document.getElementsByName("we");
-	   	for(i=0; i<wevar.length; i++){
-       	if(wevar[i].checked){
-       	wescore = parseInt(wevar[i].value);
-       }
-       }
-       
-    libertyvar = document.getElementsByName("liberty");
-	   	for(i=0; i<libertyvar.length; i++){
-       	if(libertyvar[i].checked){
-       	libertyscore = parseInt(libertyvar[i].value);
-       }
-       }
-    peepsvar = document.getElementsByName("peeps");
-	   	for(i=0; i<peepsvar.length; i++){
-       	if(peepsvar[i].checked){
-       	peepsscore = parseInt(peepsvar[i].value);
-       }
-       }
-
-    endvar = document.getElementsByName("end");
-	   	for(i=0; i<endvar.length; i++){
-       	if(endvar[i].checked){
-       	endscore = parseInt(endvar[i].value);
-       }
-       }
-
-    atlanticvar = document.getElementsByName("atlantic");
-	   	for(i=0; i<atlanticvar.length; i++){
-       	if(atlanticvar[i].checked){
-       	atlanticscore = parseInt(atlanticvar[i].value);
-       }
-       }
-       
-    thirtvar = document.getElementsByName("thirt");
-	   	for(i=0; i<thirtvar.length; i++){
-       	if(thirtvar[i].checked){
-       	thirtscore = parseInt(thirtvar[i].value);
-       }
-       }
-       
-    speakervar = document.getElementsByName("speaker");
-	   	for(i=0; i<speakervar.length; i++){
-       	if(speakervar[i].checked){
-       	speakerscore = parseInt(speakervar[i].value);
-       }
-       }
-       
-    whovar = document.getElementsByName("who");
-	   	for(i=0; i<whovar.length; i++){
-       	if(whovar[i].checked){
-       	whoscore = parseInt(whovar[i].value);
-       }
-       }
-       
-    donaldvar = document.getElementsByName("donald");
-	   	for(i=0; i<donaldvar.length; i++){
-       	if(donaldvar[i].checked){
-       	donaldscore = parseInt(donaldvar[i].value);
-       }
-       }
-       
-    mupvar = document.getElementsByName("mup");
-	   	for(i=0; i<mupvar.length; i++){
-       	if(mupvar[i].checked){
-       	mupscore = parseInt(mupvar[i].value);
-       }
-       }
-       
-    repsvar = document.getElementsByName("reps");
-	   	for(i=0; i<repsvar.length; i++){
-       	if(repsvar[i].checked){
-       	repsscore = parseInt(repsvar[i].value);
-       }
-       }
-       
-    diannevar = document.getElementsByName("dianne");
-	   	for(i=0; i<diannevar.length; i++){
-       	if(diannevar[i].checked){
-       	diannescore = parseInt(diannevar[i].value);
-       }
-       }
-       
-    sacvar = document.getElementsByName("sac");
-	   	for(i=0; i<sacvar.length; i++){
-       	if(sacvar[i].checked){
-       	sacscore = parseInt(sacvar[i].value);
-       }
-       }
-}                                                                                           
-	   
-	   
-	result = vscore + HoRscore + brscore + ogstatesscore + cscore + pwrscore + ppscore + twoRscore + warscore + senscore + firstPscore + demoscore + proscore + 2score + cppartyscore + starsscore + electscore + otherSscore + cabinetscore + coldscore + exBscore + dadscore + mlkscore + westCscore + religionscore + terscore + nsscore + presCscore + cChiefscore + 911score + responsiblescore + firescore + dclscore + livedscore + colonistscore + writescore + unitedscore + billscore + amendscore + depressscore + whoscore + generalscore + subscore + indianscore + susanscore + racescore + capscore + justicescore + judscore + rulescore + benscore + camescore + fedscore + fourscore + thanksscore + civilscore+ 2rightscore + capitalistscore + menscore +. supremescore + Mainescore + Jamesscore + noscore + ifstatescore + missscore + Louisianascore + changescore + presscore + manyscore + mexscore + Africansscore + woodscore + japscore + mikescore + wwscore + loyaltyscore + tomscore + yrsscore + adoptscore + olderscore + afrscore + calscore + ninescore + supscore + natscore + statscore + allscore + wescore + libertyscore + peepsscore + endscore + atlanticscore + thirtscore + speakerscore + whoscore + donaldscore + mupscore + repsscore + diannescore + sacscore;
-		document.getElementById("grade").innerHTML = result;
-	   
-		if (result == 0) {result2 = "I don't think you studied."};
-		if (result == 25) {result2 = "You need to spend more time. Try again."};
-		if (result == 50) {result2 = "I think you could do better. Try again."};
-		if (result == 75) {result2 = "So close. Try again."};
-		if (result == 100) {result2 = "Excellent! You're a JavaScript pro!"};
-		document.getElementById("grade2").innerHTML = result2; 
-
-
-
-return false; // required to not refresh the page; just leave this here
-} //this ends the submit function
-
+function check (){
+	var ans1 = document.quiz.question1.value;
+	var ans2 = document.quiz.question2.value;
+	var ans3 = document.quiz.question3.value;
+	var ans4 = document.quiz.question4.value;
+	var ans5 = document.quiz.question5.value;
+	var ans6 = document.quiz.question6.value;
+	var ans7 = document.quiz.question7.value;
+	var ans8 = document.quiz.question8.value;
+	var ans9 = document.quiz.question9.value;
+	var ans10 = document.quiz.question10.value;
+
+	var ans11 = document.quiz.question11.value;
+	var ans12 = document.quiz.question12.value;
+	var ans13 = document.quiz.question13.value;
+	var ans14 = document.quiz.question14.value;
+	var ans15 = document.quiz.question15.value;
+	var ans16 = document.quiz.question16.value;
+	var ans17 = document.quiz.question17.value;
+	var ans18 = document.quiz.question18.value;
+	var ans19 = document.quiz.question19.value;
+	var ans20= document.quiz.question20.value;
+
+	var ans21= document.quiz.question21.value;
+	var ans22= document.quiz.question22.value;
+	var ans23= document.quiz.question23.value;
+	var ans24= document.quiz.question24.value;
+	var ans25= document.quiz.question25.value;
+	var ans26= document.quiz.question26.value;
+	var ans27= document.quiz.question27.value;
+	var ans28= document.quiz.question28.value;
+	var ans29= document.quiz.question29.value;
+	var ans30= document.quiz.question30.value;
+
+	var ans31= document.quiz.question31.value;
+	var ans32= document.quiz.question32.value;
+	var ans33= document.quiz.question33.value;
+	var ans34= document.quiz.question34.value;
+	var ans35= document.quiz.question35.value;
+	var ans36= document.quiz.question36.value;
+	var ans37= document.quiz.question37.value;
+	var ans38= document.quiz.question38.value;
+	var ans39= document.quiz.question39.value;
+	var ans40= document.quiz.question40.value;
+
+	var ans41= document.quiz.question41.value;
+	var ans42= document.quiz.question42.value;
+	var ans43= document.quiz.question43.value;
+	var ans44= document.quiz.question44.value;
+	var ans45= document.quiz.question45.value;
+	var ans46= document.quiz.question46.value;
+	var ans47= document.quiz.question47.value;
+	var ans48= document.quiz.question48.value;
+	var ans49= document.quiz.question49.value;
+	var ans50= document.quiz.question50.value;
+	
+
+	var ans51= document.quiz.question51.value;
+	var ans52= document.quiz.question52.value;
+	var ans53= document.quiz.question53.value;
+	var ans54= document.quiz.question54.value;
+	var ans55= document.quiz.question55.value;
+	var ans56= document.quiz.question56.value;
+	var ans57= document.quiz.question57.value;
+	var ans58= document.quiz.question58.value;
+	var ans59= document.quiz.question59.value;
+	var ans60= document.quiz.question60.value;
+
+	var ans61= document.quiz.question61.value;
+	var ans62= document.quiz.question62.value;
+	var ans63= document.quiz.question63.value;
+	var ans64= document.quiz.question64.value;
+	var ans65= document.quiz.question65.value;
+	var ans66= document.quiz.question66.value;
+	var ans67= document.quiz.question67.value;
+	var ans68= document.quiz.question68.value;
+	var ans69= document.quiz.question69.value;
+	var ans70= document.quiz.question70.value;
+
+	var ans71= document.quiz.question71.value;
+	var ans72= document.quiz.question72.value;
+	var ans73= document.quiz.question73.value;
+	var ans74= document.quiz.question74.value;
+	var ans75= document.quiz.question75.value;
+	var ans76= document.quiz.question76.value;
+	var ans77= document.quiz.question77.value;
+	var ans78= document.quiz.question78.value;
+	var ans79= document.quiz.question79.value;
+	var ans80= document.quiz.question80.value;
+
+	var ans81= document.quiz.question81.value;
+	var ans82= document.quiz.question82.value;
+	var ans83= document.quiz.question83.value;
+	var ans84= document.quiz.question84.value;
+	var ans85= document.quiz.question85.value;
+	var ans86= document.quiz.question86.value;
+	var ans87= document.quiz.question87.value;
+	var ans88= document.quiz.question88.value;
+	var ans89= document.quiz.question89.value;
+	var ans90= document.quiz.question90.value;
+
+	var ans91= document.quiz.question91.value;
+	var ans92= document.quiz.question92.value;
+	var ans93= document.quiz.question93.value;
+	var ans94= document.quiz.question94.value;
+	var ans95= document.quiz.question95.value;
+	var ans96= document.quiz.question96.value;
+	var ans97= document.quiz.question97.value;
+	var ans98= document.quiz.question98.value;
+	var ans99= document.quiz.question99.value;
+	var ans100= document.quiz.question100.value;
+	var correct = 0;
+
+	if (ans1 == "November") {
+		correct++;
+	}
+	if (ans2 == "Paul D. Ryan") {
+		correct++;
+	}
+	if (ans3 == "Congress") {
+		correct++;
+	}
+	if (ans4 == "Maryland, Virginia, and North Carolina") {
+		correct++;
+	}
+	if (ans5 == "Provide schooling and education") {
+		correct++;
+	}
+	if (ans6 == "checks and balances") {
+		correct++;
+	}
+	if (ans7 == "Republican Party") {
+		correct++;
+	}
+	if (ans8 == "Freedom of Speech and Religion") {
+		correct++;
+	}
+	if (ans9 == "World War 1") {
+		correct++;
+	}
+	if (ans10 == "100") {
+		correct++;
+	}
+	if (ans11 == "George Washington") {
+		correct++;
+	}
+	if (ans12 == "All of these answers") {
+		correct++;
+	}
+	if (ans13 == "Freed slaces in most Southern states") {
+		correct++;
+	}
+	if (ans14 == "Senate and House of Representatives") {
+		correct++;
+	}
+	if (ans15 == "Democratic and Republican") {
+		correct++;
+	}
+	if (ans16 == "There is one for each state") {
+		correct++;
+	}
+	if (ans17 == "4") {
+		correct++;
+	}
+	if (ans18 == "because of the state's population") {
+		correct++;
+	}
+	if (ans19 == "Secretary of State and Secretary of Labo") {
+		correct++;
+	}
+	if (ans20 == "Communism") {
+		correct++;
+	}
+
+	if (ans21 == "the President") {
+		correct++;
+	}
+	if (ans22 == "George Washington") {
+		correct++;
+	}
+	if (ans23 == "fought for civil rights") {
+		correct++;
+	}
+	if (ans24 == "Pacific Ocean") {
+		correct++;
+	}
+	if (ans25 == "You can practice any religion or no religion at all.") {
+		correct++;
+	}
+	if (ans26 == "Guam") {
+		correct++;
+	}
+	if (ans27 == "The Civil War") {
+		correct++;
+	}
+	if (ans28 == "Advises the President") {
+		correct++;
+	}
+	if (ans29 == "The President") {
+		correct++;
+	}
+	if (ans30 == "Terrorists attacked the United States.") {
+		correct++;
+	}
+
+	if (ans31 == "serve on a jury") {
+		correct++;
+	}
+	if (ans32 == "July 4") {
+		correct++;
+	}
+	if (ans33 == "declared our independence from Great Britain") {
+		correct++;
+	}
+	if (ans34 == "American Indians") {
+		correct++;
+	}
+	if (ans35 == "all of the above") {
+		correct++;
+	}
+	if (ans36 == "1787") {
+		correct++;
+	}
+	if (ans37 == "the United States") {
+		correct++;
+	}
+	if (ans38 == "the Bill of Rights") {
+		correct++;
+	}
+	if (ans39 == "27") {
+		correct++;
+	}
+
+	if (ans40 == "Franklin Roosevelt") {
+		correct++;
+	}
+	if (ans41 == "the Vice President") {
+		correct++;
+	}
+	if (ans42 == "World War") {
+		correct++;
+	}
+	if (ans43 == "April 15") {
+		correct++;
+	}
+	if (ans44 == "Cherokee") {
+		correct++;
+	}
+	if (ans45 == "fought for women's right") {
+		correct++;
+	}
+	if (ans46 == "civil rights movement") {
+		correct++;
+	}
+	if (ans47 == "Washington. D.C") {
+		correct++;
+	}
+	if (ans48 == "John G. Roberts, Jr.") {
+		correct++;
+	}
+	if (ans49 == "all of these answers") {
+		correct++;
+	}
+	if (ans50 == "Everyone must follow the law.") {
+		correct++;
+	}
+
+	if (ans51 == "EU.S diplomat") {
+		correct++;
+	}
+	if (ans52 == "freedom") {
+		correct++;
+	}
+	if (ans53 == "to declar war") {
+		correct++;
+	}
+	if (ans54 == "2") {
+		correct++;
+	}
+	if (ans55 == "Labor Day and Thanksgiving") {
+		correct++;
+	}
+	if (ans56 == "Civil War") {
+		correct++;
+	}
+	if (ans57 == "life and pursuit of happiness") {
+		correct++;
+	}
+	if (ans58 == "capitalist economy") {
+		correct++;
+	}
+	if (ans59 == "between 18 and 26") {
+		correct++;
+	}
+	if (ans60 == "the Supreme Court") {
+		correct++;
+	}
+
+	if (ans61 == "Maine") {
+		correct++;
+	}
+	if (ans62 == "James Madison") {
+		correct++;
+	}
+	if (ans63 == "the President") {
+		correct++;
+	}
+	if (ans64 == "Congress") {
+		correct++;
+	}
+	if (ans65 == "Mississipi River") {
+		correct++;
+	}
+	if (ans66 == "the Louisiana Territory") {
+		correct++;
+	}
+	if (ans67 == "a change to the Constituion") {
+		correct++;
+	}
+	if (ans68 == "Congress") {
+		correct++;
+	}
+	if (ans69 == "435") {
+		correct++;
+	}
+	if (ans70 == "Mexican-American War") {
+		correct++;
+	}
+
+	if (ans71 == "Africans") {
+		correct++;
+	}
+	if (ans72 == "Woodrow Wilson") {
+		correct++;
+	}
+	if (ans73 == "Japan, Germany, and Italy") {
+		correct++;
+	}
+	if (ans74 == "Mike Pence") {
+		correct++;
+	}
+	if (ans75 == "World War 1") {
+		correct++;
+	}
+	if (ans76 == "give up loyalty to other countries") {
+		correct++;
+	}
+	if (ans77 == "Thomas Jefferson") {
+		correct++;
+	}
+	if (ans78 == "6") {
+		correct++;
+	}
+	if (ans79 == "July 4, 1789") {
+		correct++;
+	}
+	if (ans80 == "Citizens 18 and older can vote") {
+		correct++;
+	}
+
+	if (ans81 == "Africans") {
+		correct++;
+	}
+	if (ans82 == "California") {
+		correct++;
+	}
+	if (ans83 == "9") {
+		correct++;
+	}
+	if (ans84 == "the constitution") {
+		correct++;
+	}
+	if (ans85 == "The Star Spangled Banner") {
+		correct++;
+	}
+	if (ans86 == "New York") {
+		correct++;
+	}
+	if (ans87 == "all of the above") {
+		correct++;
+	}
+	if (ans88 == "We the people") {
+		correct++;
+	}
+	if (ans89 == "life, liberty") {
+		correct++;
+	}
+	if (ans90 == "All of the people in a state.") {
+		correct++;
+	}
+
+	if (ans91 == "ended slavery") {
+		correct++;
+	}
+	if (ans92 == "Atlantic") {
+		correct++;
+	}
+	if (ans93 == "13 colonies") {
+		correct++;
+	}
+	if (ans94 == "Speaker of the House") {
+		correct++;
+	}
+	if (ans95 == "President") {
+		correct++;
+	}
+	if (ans96 == "Jerry Brown") {
+		correct++;
+	}
+	if (ans97 == "James Madison") {
+		correct++;
+	}
+	if (ans98 == "345") {
+		correct++;
+	}
+	if (ans99 == "Dianne Feinstein") {
+		correct++;
+	}
+	if (ans100 == "Sacramento") {
+		correct++;
+	}
+
+	
+var message = ["Great Job", "That is just okay", "You need to do better"];
+var range;
+
+if(correct < 40) {
+	range = 2;
+}
+if (correct > 40&& correct <70) {
+	range= 1;
+}
+if ( correct >70) {
+	range = 0;
+}
+	
+	
+document.getElementById("after_submit").style.visibility = "visible";
+
+document.getElementById("message").innerHTML = message[range];
+document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
+}
+	
 </script>
       
+<center> source = https://www.uscis.gov/citizenship/teachers/educational-products/100-civics-questions-and-answers-mp3-audio-english-version </center>
+
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+  <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+   <p align ="justify">Created by Latina Coders</br>
+  Contact us at: </br>
+  latinaCoders2017@gmail.com</p>
+ <p align="right"> This page contains general information</br>
+   and should not be considered as legal </br>
+   advice for an individual, case, or </br>situation.</p>
+</footer>
+
+<script>
+// Toggle between hiding and showing blog replies/comments
+document.getElementById("myBtn").click();
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
  </body>
-
-
 
 </html>
